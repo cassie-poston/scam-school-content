@@ -1,0 +1,169 @@
+[
+  {
+    "id": "job-task-scam-text",
+    "category": "jobs",
+    "channel": "sms",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "emerging",
+    "title": "Get paid to “boost” products online",
+    "setup": "You mentioned to friends that you want extra income. Out of nowhere, a text arrives.",
+    "content": {
+      "sender": "+1 (555) 555-0158",
+      "senderDetail": "Not in your contacts",
+      "timestamp": "WhatsApp · Today 12:31 PM",
+      "messages": [
+        { "from": "them", "text": "Hi, I'm Lisa, a recruiter with Optima Digital. We saw your resume online. Remote part-time: earn $200–$800/day doing simple app optimization tasks. Interested? Reply YES." },
+        { "from": "me", "text": "Yes, how does it work?" },
+        { "from": "them", "text": "Great! Complete 40 tasks to earn commission. Some premium task sets need a small USDT top-up to unlock, which is refunded with your earnings 💰" }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Top up $100 to unlock the premium tasks", "outcome": "costly", "loss": 2600, "feedback": "Each “premium set” needed a bigger deposit. The earnings on screen were fake, and none of your money came back." },
+      { "id": "b", "label": "Stop replying. Real jobs never make you pay to earn", "outcome": "safe", "feedback": "Unexpected job texts plus depositing your own money to “unlock” pay is the definition of a task scam." },
+      { "id": "c", "label": "Do the free tasks only and take the small payout", "outcome": "risky", "feedback": "They'll pay you a few dollars to hook you. Staying in means more pressure to deposit." }
+    ],
+    "redFlags": [
+      "Unexpected job offer by text or WhatsApp",
+      "Vague “optimization tasks” with big pay",
+      "You have to deposit money, often crypto, to get paid"
+    ],
+    "safestAction": "Ignore unexpected job texts. Never pay money to get a job or to unlock earnings.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/08/how-spot-avoid-task-scams" },
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "job-equipment-check",
+    "category": "jobs",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "New job sends a check for home-office gear",
+    "setup": "You applied to remote jobs online. After a text-chat “interview,” you get an offer.",
+    "content": {
+      "sender": "Brightpath Solutions HR",
+      "senderDetail": "hr.brightpathsolutions@outlook.com",
+      "timestamp": "2:47 PM",
+      "subject": "Offer of Employment — Remote Data Entry Clerk",
+      "body": "Congratulations! You've been selected for the position at $32/hour.\n\nWe've mailed you a check for $2,950 to purchase your laptop and software from our approved vendor. Deposit it via mobile deposit and send payment to the vendor today so your equipment ships before your start date.",
+      "footer": "Brightpath Solutions · An Equal Opportunity Employer"
+    },
+    "options": [
+      { "id": "a", "label": "Deposit the check and pay the vendor", "outcome": "costly", "loss": 2950, "feedback": "The check was fake and bounced. The “vendor” was the scammer, and the bank held you responsible." },
+      { "id": "b", "label": "Look up the company yourself and call its main number to verify", "outcome": "safe", "feedback": "The real company had no such job. Legit employers don't hire by text chat or send checks to buy equipment." },
+      { "id": "c", "label": "Send them your bank login so they can direct-deposit instead", "outcome": "costly", "loss": 3500, "feedback": "Your login let them drain your account. No employer needs your password." }
+    ],
+    "redFlags": [
+      "Interview held only by text chat",
+      "HR emailing from a free Outlook address",
+      "Check to buy equipment from “their” vendor"
+    ],
+    "safestAction": "Verify job offers by contacting the company through its official website. Never deposit a check and send money on.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/job-scams" },
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "job-mystery-shopper",
+    "category": "jobs",
+    "channel": "letter",
+    "difficulty": 1,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Mystery shopper assignment with a check",
+    "setup": "An envelope arrives with a letter and a check made out to you.",
+    "content": {
+      "sender": "National Shopper Evaluations",
+      "senderDetail": "Customer Experience Division",
+      "timestamp": "Assignment #MS-2207",
+      "subject": "Congratulations, you've been selected as a Mystery Shopper!",
+      "body": "Enclosed is a check for $1,980. Deposit it today. Keep $300 as your fee. Use the remaining $1,680 to purchase gift cards at a local store to evaluate the customer service, then text us photos of the card numbers for your report.",
+      "footer": "Complete within 48 hours to remain eligible."
+    },
+    "options": [
+      { "id": "a", "label": "Deposit the check, buy the gift cards, and send the numbers", "outcome": "costly", "loss": 1680, "feedback": "The check was fake. The gift card money went to the scammer, and your bank took back the deposit." },
+      { "id": "b", "label": "Shred it. Real mystery shopping never involves buying gift cards for them", "outcome": "safe", "feedback": "Check plus gift cards equals scam every time. Well spotted." },
+      { "id": "c", "label": "Deposit the check but wait before buying anything", "outcome": "risky", "feedback": "You didn't send money, but depositing a fake check can cause bank fees and account problems." }
+    ],
+    "redFlags": [
+      "You never applied",
+      "Check comes with instructions to buy gift cards",
+      "Send photos of card numbers"
+    ],
+    "safestAction": "Never deposit a check from a stranger and send money or gift cards back.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/04/mystery-shopping-fake-checks-gift-cards" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "job-recruiter-interview-legit",
+    "category": "jobs",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Interview invite after you applied",
+    "setup": "Last week you applied for a marketing role on a company's own careers page. This email arrives.",
+    "content": {
+      "sender": "Priya Shah, Talent Acquisition",
+      "senderDetail": "priya.shah@harborfoods.com",
+      "timestamp": "Tuesday 9:14 AM",
+      "subject": "Harbor Foods — Marketing Coordinator interview",
+      "body": "Hi Sam,\n\nThanks for applying for the Marketing Coordinator role (Req #4471). We'd like to set up a 30-minute video interview with the hiring manager. Please pick a time that works for you through our scheduling page, or reply with your availability.\n\nBest,\nPriya",
+      "footer": "Harbor Foods · Careers: harborfoods.com/careers"
+    },
+    "options": [
+      { "id": "a", "label": "Confirm the recruiter on the company's site or LinkedIn, then schedule", "outcome": "safe", "feedback": "It matches a job you applied to, comes from the company's domain, and asks for nothing sensitive. Verifying was a smart extra step." },
+      { "id": "b", "label": "Ignore it — recruiters who email are always scams", "outcome": "risky", "feedback": "This one was real. You missed an interview for a job you wanted." },
+      { "id": "c", "label": "Reply with your SSN and bank info to speed up onboarding", "outcome": "costly", "loss": 500, "feedback": "Even real employers collect that only after a formal offer, through secure HR systems — never by email reply." }
+    ],
+    "redFlags": [
+      "Matches a specific job you applied to",
+      "Company email domain and requisition number",
+      "Video interview with a real manager; no payment or personal info requested"
+    ],
+    "safestAction": "Real recruiters ask for your time, not your money. Verify the person and domain, and share sensitive info only after a formal offer.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/job-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "job-car-wrap-ad",
+    "category": "jobs",
+    "channel": "social",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Get paid $600/week to wrap your car in ads",
+    "setup": "A post in a local community group catches your eye.",
+    "content": {
+      "sender": "Drive & Earn Program",
+      "senderDetail": "Posted in Neighborhood Buy & Sell",
+      "body": "🚗 EARN $600/WEEK just for driving! A major energy drink brand will pay you to put their logo on your car. No experience needed. Comment “INTERESTED” and we'll DM you!",
+      "footer": "86 comments"
+    },
+    "options": [
+      { "id": "a", "label": "Sign up. When the check comes, pay the “wrap installer” from it", "outcome": "costly", "loss": 1800, "feedback": "The check was fake. The money you forwarded to the “installer” came out of your own account." },
+      { "id": "b", "label": "Skip it and check the brand's official website for any real program", "outcome": "safe", "feedback": "Brands don't recruit random drivers through group posts and send checks to forward. You avoided a fake-check scam." },
+      { "id": "c", "label": "Comment “INTERESTED” to learn more", "outcome": "risky", "feedback": "No loss yet, but you just raised your hand for a flood of scam DMs." }
+    ],
+    "redFlags": [
+      "Easy money for almost no work",
+      "Recruiting through comments and DMs",
+      "Known pattern: a check you must partly send on"
+    ],
+    "safestAction": "If you get paid by check and asked to send part of it to someone, it's a scam.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  }
+]

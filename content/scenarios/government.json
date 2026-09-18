@@ -1,0 +1,271 @@
+[
+  {
+    "id": "gov-irs-gift-card-call",
+    "category": "government",
+    "channel": "call",
+    "difficulty": 1,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "“IRS agent” demands gift cards",
+    "setup": "Your phone rings mid-afternoon. The caller ID says “IRS Washington DC.”",
+    "content": {
+      "sender": "IRS Washington DC",
+      "senderDetail": "(202) 555-0147",
+      "timestamp": "Incoming call",
+      "messages": [
+        { "from": "them", "text": "This is Officer Daniels, badge 4471, with the Internal Revenue Service. You owe $2,850 in back taxes." },
+        { "from": "them", "text": "A warrant will be issued in 45 minutes unless you pay today. Go to a store and buy gift cards. Stay on the line." }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Stay on the line and buy the gift cards", "outcome": "costly", "loss": 2850, "feedback": "Gift card money is almost impossible to get back. Once you read those numbers, it's gone." },
+      { "id": "b", "label": "Hang up. Check your IRS account at irs.gov", "outcome": "safe", "feedback": "The IRS doesn't call and threaten arrest, and it never takes gift cards. Checking your account yourself shows the truth." },
+      { "id": "c", "label": "Ask for their badge number and call back that number", "outcome": "risky", "feedback": "Scammers happily give fake badge numbers and callback lines. Use a number you find yourself on irs.gov." }
+    ],
+    "redFlags": [
+      "Threat of arrest within minutes",
+      "Payment by gift card — no agency takes these",
+      "Caller ID can be faked to say anything"
+    ],
+    "safestAction": "Hang up. If you're worried, log in to your account at irs.gov or call the IRS using a number from its website.",
+    "sources": [
+      { "name": "IRS", "url": "https://www.irs.gov/newsroom/how-to-know-its-really-the-irs-calling-or-knocking-on-your-door-collection" },
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-ssa-suspended-number",
+    "category": "government",
+    "channel": "voicemail",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "“Your Social Security number is suspended”",
+    "setup": "You find a voicemail from a number you don't recognize.",
+    "content": {
+      "sender": "(888) 555-0132",
+      "senderDetail": "Voicemail · 0:38",
+      "timestamp": "0:38",
+      "body": "This is the Social Security Administration. Your Social Security number has been suspended due to suspicious activity in Texas. To avoid legal action and protect your benefits, press call back immediately and speak to an officer."
+    },
+    "options": [
+      { "id": "a", "label": "Call back so you can fix it quickly", "outcome": "costly", "loss": 3200, "feedback": "The “officer” asked you to move money to a “safe” card to protect it. That money went straight to the scammer." },
+      { "id": "b", "label": "Delete it. Contact SSA through ssa.gov if you're worried", "outcome": "safe", "feedback": "Social Security numbers don't get “suspended,” and SSA won't threaten you. Going direct is exactly right." },
+      { "id": "c", "label": "Call back but refuse to share anything", "outcome": "risky", "feedback": "You didn't lose money, but calling back tells scammers your number is active, and they're trained to wear you down." }
+    ],
+    "redFlags": [
+      "SSNs can't be “suspended”",
+      "Threats of legal action to create panic",
+      "Pressure to call back immediately"
+    ],
+    "safestAction": "Don't call back. Contact Social Security yourself at ssa.gov or 1-800-772-1213, and report the call at oig.ssa.gov.",
+    "sources": [
+      { "name": "Social Security Administration", "url": "https://www.ssa.gov/scam/" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-jury-duty-warrant",
+    "category": "government",
+    "channel": "call",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "emerging",
+    "title": "Missed jury duty “warrant”",
+    "setup": "A caller says he's with the county sheriff's office. He knows your name and address.",
+    "content": {
+      "sender": "County Sheriff",
+      "senderDetail": "(555) 555-0119",
+      "timestamp": "Incoming call",
+      "messages": [
+        { "from": "them", "text": "Records show you failed to appear for jury duty. There's a bench warrant for your arrest." },
+        { "from": "them", "text": "You can clear it today with a $1,800 bond. I'll text you the address of a Bitcoin kiosk near you. Don't hang up or the warrant is executed." }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Go deposit the cash at the kiosk", "outcome": "costly", "loss": 1800, "feedback": "Crypto ATM deposits are nearly impossible to reverse. Real courts never collect fines this way." },
+      { "id": "b", "label": "Hang up and call the court clerk using the number on the court's official website", "outcome": "safe", "feedback": "Courts don't call to demand payment, and they'd never send you to a Bitcoin ATM. Checking with the real court settles it." },
+      { "id": "c", "label": "Ask him to email the warrant so you can review it", "outcome": "risky", "feedback": "Scammers send official-looking fake documents. A PDF proves nothing, and it keeps you talking to them." }
+    ],
+    "redFlags": [
+      "Demand to pay by Bitcoin ATM",
+      "Told to stay on the phone",
+      "Knowing your name and address doesn't make it real"
+    ],
+    "safestAction": "Hang up. Look up your local court yourself and call the clerk. Law enforcement never demands payment by phone.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/06/scammers-are-impersonating-local-law-enforcement" },
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/09/scammers-use-bitcoin-atms-steal-your-money" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-irs-letter-legit",
+    "category": "government",
+    "channel": "letter",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "IRS notice in the mail",
+    "setup": "An envelope from the IRS arrives by regular mail. It says your reported income doesn't match a 1099 form.",
+    "content": {
+      "sender": "Department of the Treasury",
+      "senderDetail": "Internal Revenue Service",
+      "timestamp": "Notice CP2000",
+      "subject": "Proposed changes to your tax return",
+      "body": "We received information that is different from what you reported on your tax return. If our information is correct, you may owe additional tax. Please review this notice and respond by the date shown. You can respond by mail or through your IRS Online Account. Visit irs.gov to learn more.",
+      "footer": "Keep this notice for your records."
+    },
+    "options": [
+      { "id": "a", "label": "Verify it in your IRS Online Account at irs.gov, then respond", "outcome": "safe", "feedback": "Real IRS contact usually starts with mail. Checking your online account yourself confirms it, and responding on time avoids penalties." },
+      { "id": "b", "label": "Throw it out. The IRS never contacts people", "outcome": "costly", "loss": 450, "feedback": "The IRS does contact people, by mail first. Ignoring a real notice added interest and penalties." },
+      { "id": "c", "label": "Search online for an IRS phone number and call it", "outcome": "risky", "feedback": "Search results can include fake “tax help” lines. Use the contact info on irs.gov itself." }
+    ],
+    "redFlags": [
+      "Arrived by regular mail — how the IRS usually starts",
+      "No threats, no gift cards, no demand for immediate payment",
+      "Points you to irs.gov and gives time to respond"
+    ],
+    "safestAction": "Confirm through your IRS Online Account or irs.gov, then respond by the deadline on the notice.",
+    "sources": [
+      { "name": "IRS", "url": "https://www.irs.gov/newsroom/how-to-know-its-really-the-irs-calling-or-knocking-on-your-door-collection" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-irs-refund-phishing-email",
+    "category": "government",
+    "channel": "email",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "“Your tax refund is on hold” email",
+    "setup": "It's March. You're waiting on your tax refund when this email arrives.",
+    "content": {
+      "sender": "IRS Refund Department",
+      "senderDetail": "noreply@irs-refund-status.info",
+      "timestamp": "8:12 AM",
+      "subject": "Action required: Refund of $1,284.00 on hold",
+      "body": "Our records indicate your federal refund could not be processed due to a verification issue. To release your refund, confirm your identity within 24 hours. Failure to verify will result in cancellation of your refund.",
+      "buttonText": "Verify Identity",
+      "footer": "Internal Revenue Service · Do not reply"
+    },
+    "options": [
+      { "id": "a", "label": "Tap Verify Identity and enter your details", "outcome": "costly", "loss": 1284, "feedback": "The page stole your SSN and bank info. Scammers filed for your refund and redirected it." },
+      { "id": "b", "label": "Delete it. Check “Where's My Refund” at irs.gov", "outcome": "safe", "feedback": "The IRS doesn't email you out of the blue about refunds. Checking irs.gov directly is the right call." },
+      { "id": "c", "label": "Reply asking if this is real", "outcome": "risky", "feedback": "The reply goes to the scammer, who'll say yes. It also confirms your email is active." }
+    ],
+    "redFlags": [
+      "The IRS doesn't start contact by email",
+      "Look-alike address: irs-refund-status.info, not irs.gov",
+      "24-hour deadline to force a quick click"
+    ],
+    "safestAction": "Don't click. Track your refund with the “Where's My Refund?” tool on irs.gov, and forward the email to phishing@irs.gov.",
+    "sources": [
+      { "name": "IRS", "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts" },
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-dmv-ticket-text",
+    "category": "government",
+    "channel": "sms",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "emerging",
+    "title": "Overdue traffic ticket text",
+    "setup": "You get a text that looks like it's from your state's DMV.",
+    "content": {
+      "sender": "+1 (555) 555-0188",
+      "senderDetail": "Not in your contacts",
+      "timestamp": "Text Message · Today 7:54 AM",
+      "body": "State DMV Final Notice: Our records show you have an outstanding traffic ticket. Pay by 09/17 to avoid suspension of your driving privileges, registration, and a 35% service fee.",
+      "link": "https://statedmv-tickets.cc/pay"
+    },
+    "options": [
+      { "id": "a", "label": "Tap the link and pay the ticket", "outcome": "costly", "loss": 600, "feedback": "The site charged your card and saved the number. More charges followed." },
+      { "id": "b", "label": "Report it as junk and delete it", "outcome": "safe", "feedback": "DMVs don't text threats with payment links. Reporting junk helps block it for others." },
+      { "id": "c", "label": "Reply STOP so they quit texting", "outcome": "risky", "feedback": "No money lost, but replying confirms your number is live and invites more scam texts." }
+    ],
+    "redFlags": [
+      "Unexpected text from a random number",
+      "Threats of license suspension and extra fees",
+      "Strange web address that isn't a .gov site"
+    ],
+    "safestAction": "Don't click or reply. If you're unsure, contact your DMV using its official .gov website. Report the text as junk or forward it to 7726.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/07/text-about-overdue-traffic-ticket-probably-scam" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-medicare-card-call",
+    "category": "government",
+    "channel": "call",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "“New Medicare card” call",
+    "setup": "A polite caller says they're from Medicare, calling about your benefits.",
+    "content": {
+      "sender": "Medicare Benefits",
+      "senderDetail": "(800) 555-0163",
+      "timestamp": "Incoming call",
+      "messages": [
+        { "from": "them", "text": "Hi, I'm calling from Medicare. We're issuing new plastic cards with a chip, and your old card expires this month." },
+        { "from": "them", "text": "To mail yours, I just need to confirm your Medicare number and your bank account for the $25 processing fee." }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Give your Medicare number and bank info", "outcome": "costly", "loss": 1400, "feedback": "The scammer billed fake services under your Medicare number and drained your account." },
+      { "id": "b", "label": "Hang up and call 1-800-MEDICARE yourself", "outcome": "safe", "feedback": "Medicare doesn't call to sell cards or collect fees. Calling the official number is the safe move." },
+      { "id": "c", "label": "Give just your Medicare number, not the bank info", "outcome": "risky", "feedback": "Your Medicare number alone can be used to bill fraudulent services. Guard it like a credit card." }
+    ],
+    "redFlags": [
+      "Medicare doesn't call you unprompted for your number",
+      "Fee for a new card — Medicare cards are free",
+      "Asks for your bank account"
+    ],
+    "safestAction": "Hang up. Call 1-800-MEDICARE (1-800-633-4227) using the number on your card or medicare.gov.",
+    "sources": [
+      { "name": "Medicare.gov", "url": "https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "gov-student-loan-forgiveness",
+    "category": "government",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Student loan forgiveness “enrollment fee”",
+    "setup": "You still owe on your student loans. This email lands in your inbox.",
+    "content": {
+      "sender": "Federal Loan Relief Center",
+      "senderDetail": "enroll@studentrelief-dept.org",
+      "timestamp": "11:03 AM",
+      "subject": "You're pre-approved: up to 100% loan forgiveness",
+      "body": "Good news! Based on new federal programs, you qualify to have your balance reduced or eliminated. Spots are limited. Our Department-certified specialists will handle all paperwork. A one-time $699 enrollment fee secures your place.",
+      "buttonText": "Claim My Forgiveness",
+      "footer": "Program deadline: Friday"
+    },
+    "options": [
+      { "id": "a", "label": "Pay the $699 to lock in forgiveness", "outcome": "costly", "loss": 699, "feedback": "The company took the fee and did nothing. Some also take your FSA ID and change your loan contact info." },
+      { "id": "b", "label": "Ignore it. Check your options at studentaid.gov", "outcome": "safe", "feedback": "You never have to pay for help with federal student loans. Everything is free through studentaid.gov and your loan servicer." },
+      { "id": "c", "label": "Give them your FSA ID so they can check eligibility", "outcome": "costly", "loss": 900, "feedback": "With your FSA ID they can take over your account. Never share it with anyone." }
+    ],
+    "redFlags": [
+      "Upfront fee for loan forgiveness",
+      "“Pre-approved” and “limited spots” pressure",
+      "Not from ed.gov or studentaid.gov"
+    ],
+    "safestAction": "Never pay for student loan help. Go directly to studentaid.gov or call your loan servicer.",
+    "sources": [
+      { "name": "Federal Student Aid", "url": "https://studentaid.gov/resources/scams" }
+    ],
+    "addedOn": "2026-09-15"
+  }
+]

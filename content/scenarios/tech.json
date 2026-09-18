@@ -1,0 +1,267 @@
+[
+  {
+    "id": "tech-virus-popup",
+    "category": "tech",
+    "channel": "popup",
+    "difficulty": 1,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Flashing “virus detected” pop-up",
+    "setup": "You're reading a recipe site on your laptop. Suddenly the screen fills with this, and an alarm starts beeping.",
+    "content": {
+      "url": "security-alert-support.live",
+      "subject": "WARNING! Your computer is infected",
+      "body": "Trojan spyware detected. Your banking passwords and photos are being stolen. Do NOT close this window or restart your computer.",
+      "buttonText": "Call Support: 1-888-555-0192",
+      "footer": "Error code #0x80072ee7 · Certified Security Technicians"
+    },
+    "options": [
+      { "id": "a", "label": "Call the number for help", "outcome": "costly", "loss": 1500, "feedback": "The “technician” charged you for fake repairs and installed remote-access software to get into your bank." },
+      { "id": "b", "label": "Close the browser (force quit if needed) and don't call", "outcome": "safe", "feedback": "Real security warnings never include a phone number. Closing the browser ends the scam." },
+      { "id": "c", "label": "Click the button to scan your computer", "outcome": "risky", "feedback": "No money gone yet, but “scan” buttons on pages like this can download malware." }
+    ],
+    "redFlags": [
+      "Real virus warnings never ask you to call a number",
+      "Alarms and “do not close” scare tactics",
+      "Appeared on a random website"
+    ],
+    "safestAction": "Close the browser tab or force quit the browser. If you're worried, run the security software you already have.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-phantom-hacker",
+    "category": "tech",
+    "channel": "call",
+    "difficulty": 3,
+    "isScam": true,
+    "trend": "emerging",
+    "title": "“Foreign hackers” and a government agent",
+    "setup": "Yesterday a “tech support” rep helped you remove a pop-up. Today someone calls saying he's from your bank's fraud unit, and a “federal agent” joins the call.",
+    "content": {
+      "sender": "Summit Bank Fraud Unit",
+      "senderDetail": "(800) 555-0110",
+      "timestamp": "Incoming call",
+      "messages": [
+        { "from": "them", "text": "The technician you spoke with yesterday found foreign hackers inside your accounts. Your savings are at risk." },
+        { "from": "them", "text": "I'm transferring you to an agent with the Federal Reserve. They'll open a protected government account so you can move your funds there. Don't tell bank employees — some are involved." }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Move your savings to the “protected” account", "outcome": "costly", "loss": 5000, "feedback": "There's no such thing as a protected government account. This is a phantom-hacker scam, and the money was gone." },
+      { "id": "b", "label": "Hang up and call your bank at the number on your card", "outcome": "safe", "feedback": "Government agencies never ask you to move money, and “don't tell your bank” is a huge red flag." },
+      { "id": "c", "label": "Move only half, just to be safe", "outcome": "costly", "loss": 2500, "feedback": "Half is still going straight to scammers. Any transfer here is a loss." }
+    ],
+    "redFlags": [
+      "Multiple “officials” working together to seem legit",
+      "Told to keep it secret from your bank",
+      "The Federal Reserve doesn't hold personal accounts"
+    ],
+    "safestAction": "Hang up. Call your bank yourself. No agency will ever ask you to move money or keep secrets from your bank.",
+    "sources": [
+      { "name": "FBI IC3", "url": "https://www.ic3.gov/PSA/2023/PSA230929" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-verification-code-marketplace",
+    "category": "tech",
+    "channel": "marketplace",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Buyer asks you to read a code",
+    "setup": "You posted a bike for sale. A buyer messages right away.",
+    "content": {
+      "itemTitle": "Road bike — 54cm, great shape",
+      "itemPrice": "$320",
+      "sender": "Megan R.",
+      "senderDetail": "Joined this week",
+      "messages": [
+        { "from": "them", "text": "Hi! Still available? There are a lot of fake sellers so I want to make sure you're real 🙂" },
+        { "from": "them", "text": "I'm sending a verification code to your phone. Can you tell me the 6 digits?" }
+      ]
+    },
+    "options": [
+      { "id": "a", "label": "Read her the code — seems fair", "outcome": "costly", "loss": 600, "feedback": "That code set up an account in your name tied to your phone number, used to scam other people. Or worse, it unlocked one of your accounts." },
+      { "id": "b", "label": "Refuse, and don't share any codes", "outcome": "safe", "feedback": "A verification code is a key to an account. Anyone who asks you for one is trying to get in." },
+      { "id": "c", "label": "Send her a photo of your ID instead", "outcome": "costly", "loss": 800, "feedback": "An ID photo lets scammers open accounts in your name. Never send it to a stranger." }
+    ],
+    "redFlags": [
+      "Asks for a code sent to your phone",
+      "Brand-new profile",
+      "“Prove you're real” is the cover story"
+    ],
+    "safestAction": "Never share verification codes with anyone. Only type them into the app or site you're logging into yourself.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-login-code-legit",
+    "category": "tech",
+    "channel": "sms",
+    "difficulty": 1,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Login code you just requested",
+    "setup": "You got a new phone and you're signing in to your bank app. The app says it texted you a code.",
+    "content": {
+      "sender": "72166",
+      "senderDetail": "Summit Bank",
+      "timestamp": "Text Message · Now",
+      "body": "Summit Bank: Your one-time code is 482913. It expires in 10 minutes. Don't share this code. We will never call you to ask for it."
+    },
+    "options": [
+      { "id": "a", "label": "Type the code into the bank app yourself", "outcome": "safe", "feedback": "You requested it, and you're entering it into the app you opened. That's exactly what codes are for." },
+      { "id": "b", "label": "Ignore it — codes are a scam", "outcome": "risky", "feedback": "This one you asked for. Codes are only dangerous when someone else asks you to share them." }
+    ],
+    "redFlags": [
+      "Arrived the moment you requested it",
+      "You enter it — you never read it to anyone",
+      "Warns you not to share it"
+    ],
+    "safestAction": "Use codes only where you requested them. If a code shows up when you didn't ask for one, don't share it with anyone.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-cloud-storage-phishing",
+    "category": "tech",
+    "channel": "email",
+    "difficulty": 2,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "“Your photos will be deleted” email",
+    "setup": "You do keep your photos in cloud storage. This email arrives.",
+    "content": {
+      "sender": "Cloud Storage",
+      "senderDetail": "billing@cloud-storage-renewal.support",
+      "timestamp": "Yesterday",
+      "subject": "Payment failed: Your photos will be deleted",
+      "body": "Dear Customer,\n\nWe were unable to renew your storage plan. Your account has exceeded its limit and all photos and videos will be permanently deleted in 48 hours.\n\nUpdate your payment method now and get 50GB extra free.",
+      "buttonText": "Update Payment",
+      "footer": "Case ID 88213-C"
+    },
+    "options": [
+      { "id": "a", "label": "Update your payment so you don't lose your photos", "outcome": "costly", "loss": 900, "feedback": "The form sent your card and login to scammers, who also locked you out of your account." },
+      { "id": "b", "label": "Open your phone's settings and check your storage plan there", "outcome": "safe", "feedback": "Your real storage status is in your device settings. It showed no problem." },
+      { "id": "c", "label": "Unsubscribe using the link at the bottom", "outcome": "risky", "feedback": "No money lost, but links in phishing emails, even unsubscribe links, can lead to fake pages." }
+    ],
+    "redFlags": [
+      "“Dear Customer” instead of your name",
+      "Threat to delete your memories within 48 hours",
+      "Sender domain isn't your real provider"
+    ],
+    "safestAction": "Don't click. Check your account by opening the app or settings yourself. Report the email as phishing.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-new-signin-legit",
+    "category": "tech",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Security alert after your own login",
+    "setup": "Five minutes ago you signed in to your email on your new laptop. Then this arrives.",
+    "content": {
+      "sender": "Account Security",
+      "senderDetail": "no-reply@accounts.mailbox.com",
+      "timestamp": "Just now",
+      "subject": "New sign-in on MacBook",
+      "body": "Your account was just signed in to from a new MacBook in Chicago, IL.\n\nIf this was you, you don't need to do anything. If not, we'll help you secure your account.",
+      "buttonText": "Check Activity",
+      "footer": "You can also review security activity anytime in your account settings."
+    },
+    "options": [
+      { "id": "a", "label": "It was you. Do nothing, or review activity in your account settings", "outcome": "safe", "feedback": "The alert matches what you just did, it doesn't ask for anything, and checking your settings directly is the gold standard." },
+      { "id": "b", "label": "Panic and reset your password using the button in the email", "outcome": "risky", "feedback": "It was real this time, so no harm. But get in the habit of going to your account settings instead of email buttons." },
+      { "id": "c", "label": "Reply with your password so they know it's you", "outcome": "costly", "loss": 400, "feedback": "No real company wants your password by email. Emailing it put your account at risk." }
+    ],
+    "redFlags": [
+      "Matches something you did minutes ago",
+      "Says “if this was you, do nothing” — no pressure",
+      "Points you to your account settings"
+    ],
+    "safestAction": "If an alert matches your own activity, you're fine. If it doesn't, go to your account settings directly — not through the email.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-fake-customer-service-search",
+    "category": "tech",
+    "channel": "website",
+    "difficulty": 3,
+    "isScam": true,
+    "trend": "evergreen",
+    "title": "Fake airline help line in search results",
+    "setup": "Your flight got canceled. You search “SkyWay Airlines phone number” and tap the top result.",
+    "content": {
+      "url": "skyway-airlines-help.com",
+      "sender": "Sponsored · SkyWay Customer Care",
+      "subject": "Talk to a live SkyWay agent 24/7",
+      "body": "Canceled or delayed flight? Our agents can rebook you instantly. Average wait: under 1 minute.",
+      "buttonText": "Call 1-866-555-0117",
+      "footer": "Independent travel assistance service"
+    },
+    "options": [
+      { "id": "a", "label": "Call and let them rebook you with your card", "outcome": "costly", "loss": 1100, "feedback": "The “agent” charged a rebooking fee and a fake ticket. The airline had no record of it." },
+      { "id": "b", "label": "Use the airline's app or the number on your booking confirmation", "outcome": "safe", "feedback": "Sponsored results can be bought by anyone. Your confirmation email and the airline's app have the real contact info." },
+      { "id": "c", "label": "Call, but only give your confirmation code", "outcome": "risky", "feedback": "Your confirmation code plus last name can let someone change or cancel your trip." }
+    ],
+    "redFlags": [
+      "“Sponsored” result, not the airline's own site",
+      "Small print: “independent travel assistance”",
+      "Domain isn't the airline's real website"
+    ],
+    "safestAction": "Get customer-service numbers from the company's app, your receipt, or a website address you type in yourself.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2020/08/scammers-customer-service-another-imposter-scam" }
+    ],
+    "addedOn": "2026-09-15"
+  },
+  {
+    "id": "tech-fake-captcha-command",
+    "category": "tech",
+    "channel": "website",
+    "difficulty": 3,
+    "isScam": true,
+    "trend": "emerging",
+    "title": "CAPTCHA that asks you to run a command",
+    "setup": "You click a link to download a free PDF. Before the download, a “verify you're human” box appears.",
+    "content": {
+      "url": "docs-free-download.net/verify",
+      "sender": "Verify you are human",
+      "subject": "Complete these steps to continue",
+      "body": "1. Press Windows + R\n2. Press Ctrl + V\n3. Press Enter\n\nThis confirms you are not a robot.",
+      "buttonText": "I'm not a robot",
+      "footer": "Verification ID: 7F2-19A"
+    },
+    "options": [
+      { "id": "a", "label": "Follow the steps — it's just a CAPTCHA", "outcome": "costly", "loss": 2400, "feedback": "Those keystrokes ran a hidden command that installed malware. It stole your saved passwords and banking logins." },
+      { "id": "b", "label": "Close the page. Real CAPTCHAs never ask you to run commands", "outcome": "safe", "feedback": "Real CAPTCHAs ask you to click boxes or pick pictures — never to press keyboard shortcuts." },
+      { "id": "c", "label": "Try it on a different computer instead", "outcome": "costly", "loss": 2400, "feedback": "Any computer that runs that command gets infected. The trick works the same everywhere." }
+    ],
+    "redFlags": [
+      "Asks you to press keyboard shortcuts to “verify”",
+      "The site copied a command to your clipboard without telling you",
+      "Came from a free-download site"
+    ],
+    "safestAction": "Close the page. If you already ran the steps, disconnect from the internet, run a security scan, and change your passwords from another device.",
+    "sources": [
+      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2026/06/how-spot-captcha-scam" }
+    ],
+    "addedOn": "2026-09-15"
+  }
+]

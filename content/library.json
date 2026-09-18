@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "government",
+      "name": "Government Impostors",
+      "symbol": "building.columns.fill",
+      "blurb": "Fake IRS, Social Security, police, DMV, and court officials."
+    },
+    {
+      "id": "delivery",
+      "name": "Deliveries & Tolls",
+      "symbol": "shippingbox.fill",
+      "blurb": "Fake package, customs, and unpaid-toll messages."
+    },
+    {
+      "id": "banking",
+      "name": "Banks & Payment Apps",
+      "symbol": "creditcard.fill",
+      "blurb": "Bank impersonators, payment-app tricks, and QR payments."
+    },
+    {
+      "id": "tech",
+      "name": "Tech Support & Accounts",
+      "symbol": "lock.laptopcomputer",
+      "blurb": "Fake virus alerts, verification-code theft, and account phishing."
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping & Marketplaces",
+      "symbol": "cart.fill",
+      "blurb": "Fake checks, fake stores, rentals, and buyer/seller scams."
+    },
+    {
+      "id": "investing",
+      "name": "Investments & Crypto",
+      "symbol": "chart.line.uptrend.xyaxis",
+      "blurb": "Crypto schemes, fake platforms, and 'protect your money' tricks."
+    },
+    {
+      "id": "jobs",
+      "name": "Jobs & Easy Money",
+      "symbol": "briefcase.fill",
+      "blurb": "Task scams, fake jobs, and pay-to-get-paid offers."
+    },
+    {
+      "id": "family",
+      "name": "Romance & Family",
+      "symbol": "heart.fill",
+      "blurb": "Fake emergencies, romance scams, and hacked friends."
+    }
+  ]
+}

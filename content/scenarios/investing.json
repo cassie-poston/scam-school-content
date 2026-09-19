@@ -13,15 +13,41 @@
       "senderDetail": "+1 (555) 555-0126",
       "timestamp": "Text Message · Today 8:40 PM",
       "messages": [
-        { "from": "them", "text": "Sorry, is this Kevin? We're still on for golf Sunday? ⛳️" },
-        { "from": "me", "text": "Wrong number, but have fun!" },
-        { "from": "them", "text": "So glad I texted you by mistake 😊 My uncle trades crypto and I made $38,000 last month on his platform. I can show you how. Start with just $500!" }
+        {
+          "from": "them",
+          "text": "Sorry, is this Kevin? We're still on for golf Sunday? ⛳️"
+        },
+        {
+          "from": "me",
+          "text": "Wrong number, but have fun!"
+        },
+        {
+          "from": "them",
+          "text": "So glad I texted you by mistake 😊 My uncle trades crypto and I made $38,000 last month on his platform. I can show you how. Start with just $500!"
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Try $500 — she showed you screenshots of her gains", "outcome": "costly", "loss": 4500, "feedback": "The fake platform showed big “profits” until you invested more. Then it demanded “taxes” to withdraw. You got nothing back." },
-      { "id": "b", "label": "Stop replying and block the number", "outcome": "safe", "feedback": "“Wrong number” texts that turn friendly and then pitch investing are a known pattern for crypto investment scams." },
-      { "id": "c", "label": "Invest a small amount and withdraw it to test the platform", "outcome": "costly", "loss": 3000, "feedback": "Scammers often let you withdraw a little to build trust, then take much more." }
+      {
+        "id": "a",
+        "label": "Try $500 — she showed you screenshots of her gains",
+        "outcome": "costly",
+        "loss": 4500,
+        "feedback": "The fake platform showed big “profits” until you invested more. Then it demanded “taxes” to withdraw. You got nothing back."
+      },
+      {
+        "id": "b",
+        "label": "Stop replying and block the number",
+        "outcome": "safe",
+        "feedback": "“Wrong number” texts that turn friendly and then pitch investing are a known pattern for crypto investment scams."
+      },
+      {
+        "id": "c",
+        "label": "Invest a small amount and withdraw it to test the platform",
+        "outcome": "costly",
+        "loss": 3000,
+        "feedback": "Scammers often let you withdraw a little to build trust, then take much more."
+      }
     ],
     "redFlags": [
       "A friendship that started with a “wrong number”",
@@ -30,8 +56,14 @@
     ],
     "safestAction": "Don't invest with anyone you've only met online. Block, report, and never download a trading app someone sends you.",
     "sources": [
-      { "name": "FBI IC3", "url": "https://www.ic3.gov/PSA/2023/psa230314" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams" }
+      {
+        "name": "FBI IC3",
+        "url": "https://www.ic3.gov/PSA/2023/psa230314"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -51,9 +83,25 @@
       "footer": "124 members reacted 🔥"
     },
     "options": [
-      { "id": "a", "label": "Message him to grab a VIP seat", "outcome": "costly", "loss": 2000, "feedback": "The “VIP fee” and your first deposit disappeared into a fake trading account." },
-      { "id": "b", "label": "Leave the group and report it", "outcome": "safe", "feedback": "No legitimate investment guarantees high returns with no risk. Leaving is exactly right." },
-      { "id": "c", "label": "Watch for a few weeks to see if it's real", "outcome": "risky", "feedback": "No money lost, but these groups are full of fake members posting fake wins to reel you in." }
+      {
+        "id": "a",
+        "label": "Message him to grab a VIP seat",
+        "outcome": "costly",
+        "loss": 2000,
+        "feedback": "The “VIP fee” and your first deposit disappeared into a fake trading account."
+      },
+      {
+        "id": "b",
+        "label": "Leave the group and report it",
+        "outcome": "safe",
+        "feedback": "No legitimate investment guarantees high returns with no risk. Leaving is exactly right."
+      },
+      {
+        "id": "c",
+        "label": "Watch for a few weeks to see if it's real",
+        "outcome": "risky",
+        "feedback": "No money lost, but these groups are full of fake members posting fake wins to reel you in."
+      }
     ],
     "redFlags": [
       "“Guaranteed” returns with “zero risk”",
@@ -62,8 +110,14 @@
     ],
     "safestAction": "Ignore unsolicited investment pitches. Check any adviser at investor.gov before investing a dollar.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/investment-scams" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/investment-scams"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -81,14 +135,36 @@
       "senderDetail": "(202) 555-0183",
       "timestamp": "Incoming call",
       "messages": [
-        { "from": "them", "text": "Your identity was used in a money laundering case. Your bank accounts will be frozen." },
-        { "from": "them", "text": "To protect your assets, withdraw your savings and buy gold. A secure government courier will pick it up for safekeeping. Tell no one — it's a sealed investigation." }
+        {
+          "from": "them",
+          "text": "Your identity was used in a money laundering case. Your bank accounts will be frozen."
+        },
+        {
+          "from": "them",
+          "text": "To protect your assets, withdraw your savings and buy gold. A secure government courier will pick it up for safekeeping. Tell no one — it's a sealed investigation."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Buy the gold and hand it to the courier", "outcome": "costly", "loss": 5000, "feedback": "The “courier” worked for the scammers. The gold was gone the moment you handed it over." },
-      { "id": "b", "label": "Hang up and tell someone you trust", "outcome": "safe", "feedback": "No government agency will ever ask you to hand cash or gold to a courier. Talking to someone breaks the scammer's spell of secrecy." },
-      { "id": "c", "label": "Ask for the agent's badge number and verify it", "outcome": "risky", "feedback": "They'll supply convincing fake credentials. Nothing they give you can make this request real." }
+      {
+        "id": "a",
+        "label": "Buy the gold and hand it to the courier",
+        "outcome": "costly",
+        "loss": 5000,
+        "feedback": "The “courier” worked for the scammers. The gold was gone the moment you handed it over."
+      },
+      {
+        "id": "b",
+        "label": "Hang up and tell someone you trust",
+        "outcome": "safe",
+        "feedback": "No government agency will ever ask you to hand cash or gold to a courier. Talking to someone breaks the scammer's spell of secrecy."
+      },
+      {
+        "id": "c",
+        "label": "Ask for the agent's badge number and verify it",
+        "outcome": "risky",
+        "feedback": "They'll supply convincing fake credentials. Nothing they give you can make this request real."
+      }
     ],
     "redFlags": [
       "Told to buy gold or withdraw cash",
@@ -97,7 +173,10 @@
     ],
     "safestAction": "Hang up. Government agencies never tell you to move money, buy gold, or hand anything to a courier.",
     "sources": [
-      { "name": "FBI IC3", "url": "https://www.ic3.gov/PSA/2024/PSA240129" }
+      {
+        "name": "FBI IC3",
+        "url": "https://www.ic3.gov/PSA/2024/PSA240129"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -115,14 +194,36 @@
       "senderDetail": "(800) 555-0110",
       "timestamp": "Call in progress · 18:42",
       "messages": [
-        { "from": "them", "text": "Good, you've withdrawn the cash. Now go into the gas station on the corner. There's a Bitcoin machine by the door." },
-        { "from": "them", "text": "I'll text you a QR code. Scan it at the machine and insert the cash. That moves it into your secure wallet." }
+        {
+          "from": "them",
+          "text": "Good, you've withdrawn the cash. Now go into the gas station on the corner. There's a Bitcoin machine by the door."
+        },
+        {
+          "from": "them",
+          "text": "I'll text you a QR code. Scan it at the machine and insert the cash. That moves it into your secure wallet."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Insert the cash and scan the QR code", "outcome": "costly", "loss": 3500, "feedback": "The QR code was the scammer's wallet. Crypto ATM deposits are nearly impossible to recover." },
-      { "id": "b", "label": "Hang up and walk into your bank branch", "outcome": "safe", "feedback": "No bank or government agency will ever send you to a Bitcoin ATM. Hanging up is always the answer." },
-      { "id": "c", "label": "Ask the store clerk to hold the phone while you think", "outcome": "risky", "feedback": "You didn't pay yet, but you're still under their control. Ending the call is what breaks it." }
+      {
+        "id": "a",
+        "label": "Insert the cash and scan the QR code",
+        "outcome": "costly",
+        "loss": 3500,
+        "feedback": "The QR code was the scammer's wallet. Crypto ATM deposits are nearly impossible to recover."
+      },
+      {
+        "id": "b",
+        "label": "Hang up and walk into your bank branch",
+        "outcome": "safe",
+        "feedback": "No bank or government agency will ever send you to a Bitcoin ATM. Hanging up is always the answer."
+      },
+      {
+        "id": "c",
+        "label": "Ask the store clerk to hold the phone while you think",
+        "outcome": "risky",
+        "feedback": "You didn't pay yet, but you're still under their control. Ending the call is what breaks it."
+      }
     ],
     "redFlags": [
       "Any instruction to use a Bitcoin ATM",
@@ -131,7 +232,10 @@
     ],
     "safestAction": "Anyone who tells you to pay with cryptocurrency or a Bitcoin ATM is a scammer. Hang up.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/09/scammers-use-bitcoin-atms-steal-your-money" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/09/scammers-use-bitcoin-atms-steal-your-money"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -153,9 +257,25 @@
       "footer": "Keystone Retirement will never ask for your password or Social Security number by email."
     },
     "options": [
-      { "id": "a", "label": "Open the Keystone app or your saved bookmark to view it", "outcome": "safe", "feedback": "Expected timing, no request for info, and you went in through your own app. Perfect habit." },
-      { "id": "b", "label": "Report it as phishing", "outcome": "risky", "feedback": "No harm, but this one was real. Signing in through your app would have confirmed it." },
-      { "id": "c", "label": "Reply with your SSN to get the statement faster", "outcome": "costly", "loss": 800, "feedback": "Even with a real company, email isn't safe for your SSN. It was exposed and misused." }
+      {
+        "id": "a",
+        "label": "Open the Keystone app or your saved bookmark to view it",
+        "outcome": "safe",
+        "feedback": "Expected timing, no request for info, and you went in through your own app. Perfect habit."
+      },
+      {
+        "id": "b",
+        "label": "Report it as phishing",
+        "outcome": "risky",
+        "feedback": "No harm, but this one was real. Signing in through your app would have confirmed it."
+      },
+      {
+        "id": "c",
+        "label": "Reply with your SSN to get the statement faster",
+        "outcome": "costly",
+        "loss": 800,
+        "feedback": "Even with a real company, email isn't safe for your SSN. It was exposed and misused."
+      }
     ],
     "redFlags": [
       "Routine timing — quarterly statements are expected",
@@ -164,9 +284,13 @@
     ],
     "safestAction": "For financial accounts, sign in through the app or a bookmark you saved — never through links, even in real emails.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "active": false
   },
   {
     "id": "inv-deepfake-celebrity-ad",
@@ -186,9 +310,25 @@
       "footer": "Registration closes at midnight"
     },
     "options": [
-      { "id": "a", "label": "Sign up and deposit the $250 minimum", "outcome": "costly", "loss": 2800, "feedback": "The video was AI-generated. A “broker” then called and pressured you into larger deposits you couldn't withdraw." },
-      { "id": "b", "label": "Scroll past and report the ad", "outcome": "safe", "feedback": "Celebrity endorsements in ads can be faked with AI. Real opportunities don't come from urgent social media ads." },
-      { "id": "c", "label": "Give them your phone number for more info", "outcome": "risky", "feedback": "No money lost yet, but you'll get relentless high-pressure calls from fake brokers." }
+      {
+        "id": "a",
+        "label": "Sign up and deposit the $250 minimum",
+        "outcome": "costly",
+        "loss": 2800,
+        "feedback": "The video was AI-generated. A “broker” then called and pressured you into larger deposits you couldn't withdraw."
+      },
+      {
+        "id": "b",
+        "label": "Scroll past and report the ad",
+        "outcome": "safe",
+        "feedback": "Celebrity endorsements in ads can be faked with AI. Real opportunities don't come from urgent social media ads."
+      },
+      {
+        "id": "c",
+        "label": "Give them your phone number for more info",
+        "outcome": "risky",
+        "feedback": "No money lost yet, but you'll get relentless high-pressure calls from fake brokers."
+      }
     ],
     "redFlags": [
       "Celebrity faces and voices can be deepfaked",
@@ -197,8 +337,14 @@
     ],
     "safestAction": "Treat investment ads on social media as scams by default. Research any platform independently and check it at investor.gov.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/investment-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/investment-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   }

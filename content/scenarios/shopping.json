@@ -14,14 +14,37 @@
       "sender": "David M.",
       "senderDetail": "Out of state",
       "messages": [
-        { "from": "them", "text": "I'll take it! My assistant mailed you a cashier's check for $1,800. It includes my movers' fee." },
-        { "from": "them", "text": "Please deposit it and send the extra $1,500 to the movers by payment app so they can pick it up tomorrow." }
+        {
+          "from": "them",
+          "text": "I'll take it! My assistant mailed you a cashier's check for $1,800. It includes my movers' fee."
+        },
+        {
+          "from": "them",
+          "text": "Please deposit it and send the extra $1,500 to the movers by payment app so they can pick it up tomorrow."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Deposit the check, then send the $1,500", "outcome": "costly", "loss": 1500, "feedback": "The check bounced weeks later. The bank took back the money, and your $1,500 was gone." },
-      { "id": "b", "label": "Say no. Local pickup, exact amount, cash or in-app payment only", "outcome": "safe", "feedback": "No real buyer overpays and asks for change back. Keeping it simple and local shuts the scam down." },
-      { "id": "c", "label": "Wait until the check “clears,” then send the money", "outcome": "costly", "loss": 1500, "feedback": "Funds can show as available before a fake check is caught. When it bounced, you owed the bank." }
+      {
+        "id": "a",
+        "label": "Deposit the check, then send the $1,500",
+        "outcome": "costly",
+        "loss": 1500,
+        "feedback": "The check bounced weeks later. The bank took back the money, and your $1,500 was gone."
+      },
+      {
+        "id": "b",
+        "label": "Say no. Local pickup, exact amount, cash or in-app payment only",
+        "outcome": "safe",
+        "feedback": "No real buyer overpays and asks for change back. Keeping it simple and local shuts the scam down."
+      },
+      {
+        "id": "c",
+        "label": "Wait until the check “clears,” then send the money",
+        "outcome": "costly",
+        "loss": 1500,
+        "feedback": "Funds can show as available before a fake check is caught. When it bounced, you owed the bank."
+      }
     ],
     "redFlags": [
       "Check for more than the price",
@@ -30,7 +53,10 @@
     ],
     "safestAction": "Never accept overpayment. If a check is involved, don't send any money back — ever.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -53,9 +79,26 @@
       "footer": "Secure Payment Services © 2026"
     },
     "options": [
-      { "id": "a", "label": "Pay the $300 upgrade — you'll get it back", "outcome": "costly", "loss": 300, "feedback": "There was never a payment. The “upgrade fee” went to the fake buyer." },
-      { "id": "b", "label": "Open your payment app yourself and check your balance", "outcome": "safe", "feedback": "No pending money appeared in your real app, because there wasn't any. Payment services don't email from Gmail." },
-      { "id": "c", "label": "Ship the camera since the email says they paid", "outcome": "costly", "loss": 450, "feedback": "The payment email was fake. You lost the camera and never got paid." }
+      {
+        "id": "a",
+        "label": "Pay the $300 upgrade — you'll get it back",
+        "outcome": "costly",
+        "loss": 300,
+        "feedback": "There was never a payment. The “upgrade fee” went to the fake buyer."
+      },
+      {
+        "id": "b",
+        "label": "Open your payment app yourself and check your balance",
+        "outcome": "safe",
+        "feedback": "No pending money appeared in your real app, because there wasn't any. Payment services don't email from Gmail."
+      },
+      {
+        "id": "c",
+        "label": "Ship the camera since the email says they paid",
+        "outcome": "costly",
+        "loss": 450,
+        "feedback": "The payment email was fake. You lost the camera and never got paid."
+      }
     ],
     "redFlags": [
       "Payment company emailing from a Gmail address",
@@ -64,7 +107,10 @@
     ],
     "safestAction": "Confirm payments only inside your payment app. You never pay to receive money.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -86,9 +132,26 @@
       "footer": "2,318 likes · Comments turned off"
     },
     "options": [
-      { "id": "a", "label": "Order it before they sell out", "outcome": "costly", "loss": 380, "feedback": "No vacuum arrived. The site kept your card and ran more charges." },
-      { "id": "b", "label": "Skip it. Search the store's name + “scam” or “reviews” first", "outcome": "safe", "feedback": "A quick search usually shows complaints about sites like this. 92% off with comments turned off is a classic fake store." },
-      { "id": "c", "label": "Buy it, but pay with a gift card for privacy", "outcome": "costly", "loss": 49, "feedback": "Paying a fake store with a gift card means no chance of getting it back." }
+      {
+        "id": "a",
+        "label": "Order it before they sell out",
+        "outcome": "costly",
+        "loss": 380,
+        "feedback": "No vacuum arrived. The site kept your card and ran more charges."
+      },
+      {
+        "id": "b",
+        "label": "Skip it. Search the store's name + “scam” or “reviews” first",
+        "outcome": "safe",
+        "feedback": "A quick search usually shows complaints about sites like this. 92% off with comments turned off is a classic fake store."
+      },
+      {
+        "id": "c",
+        "label": "Buy it, but pay with a gift card for privacy",
+        "outcome": "costly",
+        "loss": 49,
+        "feedback": "Paying a fake store with a gift card means no chance of getting it back."
+      }
     ],
     "redFlags": [
       "Unrealistic discount",
@@ -97,9 +160,13 @@
     ],
     "safestAction": "Research unfamiliar stores before buying and pay by credit card, which offers the strongest dispute rights.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/online-shopping" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/online-shopping"
+      }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "active": false
   },
   {
     "id": "shop-safe-exchange-legit",
@@ -116,14 +183,35 @@
       "sender": "Carlos V.",
       "senderDetail": "Member since 2019 · 42 ratings",
       "messages": [
-        { "from": "them", "text": "Hi, is the tablet available? I can do $180 cash." },
-        { "from": "them", "text": "Could we meet at the safe exchange spot in the police station parking lot Saturday at noon? I'd like to power it on before I pay." }
+        {
+          "from": "them",
+          "text": "Hi, is the tablet available? I can do $180 cash."
+        },
+        {
+          "from": "them",
+          "text": "Could we meet at the safe exchange spot in the police station parking lot Saturday at noon? I'd like to power it on before I pay."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Agree. Meet there, let him test it, count the cash", "outcome": "safe", "feedback": "Local buyer, established profile, public safe-exchange spot, full price in person. That's how it should go." },
-      { "id": "b", "label": "Decline — it seems too easy", "outcome": "risky", "feedback": "No harm done, but this was a real, careful buyer. You're still stuck with the tablet." },
-      { "id": "c", "label": "Ask him to pay a deposit first by gift card", "outcome": "risky", "feedback": "Asking a real buyer for gift cards looks like a scam — and scared him off." }
+      {
+        "id": "a",
+        "label": "Agree. Meet there, let him test it, count the cash",
+        "outcome": "safe",
+        "feedback": "Local buyer, established profile, public safe-exchange spot, full price in person. That's how it should go."
+      },
+      {
+        "id": "b",
+        "label": "Decline — it seems too easy",
+        "outcome": "risky",
+        "feedback": "No harm done, but this was a real, careful buyer. You're still stuck with the tablet."
+      },
+      {
+        "id": "c",
+        "label": "Ask him to pay a deposit first by gift card",
+        "outcome": "risky",
+        "feedback": "Asking a real buyer for gift cards looks like a scam — and scared him off."
+      }
     ],
     "redFlags": [
       "Meets in person at a public, monitored place",
@@ -132,7 +220,10 @@
     ],
     "safestAction": "For local sales, meet in a public place (many police stations have safe-exchange zones) and accept cash or in-app payment in person.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -148,17 +239,40 @@
     "content": {
       "itemTitle": "2BR/2BA · Updated kitchen · Parking",
       "itemPrice": "$1,150/mo",
-      "sender": "Pastor Richard",
-      "senderDetail": "Landlord",
+      "sender": "Richard",
+      "senderDetail": "Owner",
       "messages": [
-        { "from": "them", "text": "God bless. I'm doing missionary work overseas, so I can't show the unit. Many people want it." },
-        { "from": "them", "text": "Send the $1,150 deposit and first month by payment app and I will mail you the keys right away." }
+        {
+          "from": "them",
+          "text": "Hi. I'm working overseas on a long contract, so I can't show the unit in person. Many people want it."
+        },
+        {
+          "from": "them",
+          "text": "Send the $1,150 deposit and first month by payment app and I will mail you the keys right away."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Send the $2,300 before someone else gets it", "outcome": "costly", "loss": 2300, "feedback": "The listing was copied from a real rental. No keys ever came, and the owner didn't know it was listed." },
-      { "id": "b", "label": "Insist on seeing it in person and verifying who owns it before paying anything", "outcome": "safe", "feedback": "Real landlords let you see the place. Checking property records or meeting in person exposes fake listings fast." },
-      { "id": "c", "label": "Send just the deposit to hold it", "outcome": "costly", "loss": 1150, "feedback": "Any money sent to hold an unseen rental can vanish. The deposit was gone." }
+      {
+        "id": "a",
+        "label": "Send the $2,300 before someone else gets it",
+        "outcome": "costly",
+        "loss": 2300,
+        "feedback": "The listing was copied from a real rental. No keys ever came, and the owner didn't know it was listed."
+      },
+      {
+        "id": "b",
+        "label": "Insist on seeing it in person and verifying who owns it before paying anything",
+        "outcome": "safe",
+        "feedback": "Real landlords let you see the place. Checking property records or meeting in person exposes fake listings fast."
+      },
+      {
+        "id": "c",
+        "label": "Send just the deposit to hold it",
+        "outcome": "costly",
+        "loss": 1150,
+        "feedback": "Any money sent to hold an unseen rental can vanish. The deposit was gone."
+      }
     ],
     "redFlags": [
       "Rent far below similar units",
@@ -167,7 +281,10 @@
     ],
     "safestAction": "Never pay for a rental you haven't seen. Search the address to see if the listing appears elsewhere under a different name.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/rental-listing-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/rental-listing-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -181,17 +298,32 @@
     "title": "Refund confirmation for your return",
     "setup": "Last week you returned a jacket at the store's counter. Today:",
     "content": {
-      "sender": "Northline Outfitters",
-      "senderDetail": "returns@northline.com",
+      "sender": "Southwesterline Outfitters",
+      "senderDetail": "returns@southwesterline.com",
       "timestamp": "10:22 AM",
       "subject": "Your refund has been issued",
-      "body": "Hi Sam,\n\nWe've received your return of Men's Alpine Jacket (Order #NL-448120). A refund of $129.00 has been issued to your Visa ending in 1188. Please allow 5–10 business days for it to appear.\n\nNo action is needed.",
-      "footer": "Questions? Visit northline.com/help or call the number on your receipt."
+      "body": "Hi Sam,\n\nWe've received your return of Men's Alpine Jacket (Order #SW-448120). A refund of $129.00 has been issued to your Visa ending in 1188. Please allow 5–10 business days for it to appear.\n\nNo action is needed.",
+      "footer": "Questions? Visit southwesterline.com/help or call the number on your receipt."
     },
     "options": [
-      { "id": "a", "label": "Nothing to do. Watch your card statement for the refund", "outcome": "safe", "feedback": "Matches a return you made, uses your name, and asks for nothing. That's what a real refund notice looks like." },
-      { "id": "b", "label": "Call the store to “confirm” by giving your full card number", "outcome": "risky", "feedback": "It was real, so nothing bad happened. But no store needs your full card number to issue a refund." },
-      { "id": "c", "label": "Mark it as spam", "outcome": "risky", "feedback": "No harm, but this one was legitimate, and future messages from the store may get lost." }
+      {
+        "id": "a",
+        "label": "Nothing to do. Watch your card statement for the refund",
+        "outcome": "safe",
+        "feedback": "Matches a return you made, uses your name, and asks for nothing. That's what a real refund notice looks like."
+      },
+      {
+        "id": "b",
+        "label": "Call the store to “confirm” by giving your full card number",
+        "outcome": "risky",
+        "feedback": "It was real, so nothing bad happened. But no store needs your full card number to issue a refund."
+      },
+      {
+        "id": "c",
+        "label": "Mark it as spam",
+        "outcome": "risky",
+        "feedback": "No harm, but this one was legitimate, and future messages from the store may get lost."
+      }
     ],
     "redFlags": [
       "Matches a return you actually made",
@@ -200,7 +332,10 @@
     ],
     "safestAction": "Real notices match your activity and don't ask for anything. Confirm on your card statement or in your account.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -220,9 +355,24 @@
       "sender": "Printed into a laminated table card with the restaurant's logo"
     },
     "options": [
-      { "id": "a", "label": "Check the preview, see it's the restaurant's site, and open the menu", "outcome": "safe", "feedback": "The staff told you to use it, it's printed on their materials, and the preview matches the restaurant's name. Checking the preview is the right habit." },
-      { "id": "b", "label": "Refuse to scan and ask for a paper menu", "outcome": "risky", "feedback": "Totally fine and never wrong, but this one was legitimate. Checking the link preview works too." },
-      { "id": "c", "label": "Scan it and enter your card without looking at the link", "outcome": "risky", "feedback": "It happened to be real, but skipping the preview is how parking and package QR scams get people." }
+      {
+        "id": "a",
+        "label": "Check the preview, see it's the restaurant's site, and open the menu",
+        "outcome": "safe",
+        "feedback": "The staff told you to use it, it's printed on their materials, and the preview matches the restaurant's name. Checking the preview is the right habit."
+      },
+      {
+        "id": "b",
+        "label": "Refuse to scan and ask for a paper menu",
+        "outcome": "risky",
+        "feedback": "Totally fine and never wrong, but this one was legitimate. Checking the link preview works too."
+      },
+      {
+        "id": "c",
+        "label": "Scan it and enter your card without looking at the link",
+        "outcome": "risky",
+        "feedback": "It happened to be real, but skipping the preview is how parking and package QR scams get people."
+      }
     ],
     "redFlags": [
       "Printed on the restaurant's own table card, not a stuck-on sticker",
@@ -231,7 +381,10 @@
     ],
     "safestAction": "Before tapping any QR link, read the preview. Make sure it matches who you expect and has no odd spellings.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
+      }
     ],
     "addedOn": "2026-09-15"
   }

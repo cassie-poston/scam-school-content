@@ -9,25 +9,44 @@
     "title": "USPS “incomplete address” text",
     "setup": "You're not expecting anything, but this text shows up.",
     "content": {
-      "sender": "+63 912 555 0144",
+      "sender": "+1 (555) 555-0162",
       "senderDetail": "Not in your contacts",
       "timestamp": "Text Message · Today 6:21 PM",
       "body": "USPS: Your package is on hold due to an incomplete address. Update your details within 12 hours or it will be returned to sender.",
       "link": "https://usps.redeliver-center.top/update"
     },
     "options": [
-      { "id": "a", "label": "Tap the link and update your address", "outcome": "costly", "loss": 450, "feedback": "The fake site asked for a small “redelivery fee” and stole your card number." },
-      { "id": "b", "label": "Delete it and report it as junk", "outcome": "safe", "feedback": "USPS doesn't text you unless you signed up for tracking on a specific package. This was a smishing text." },
-      { "id": "c", "label": "Reply asking which package it is", "outcome": "risky", "feedback": "No money lost, but replying tells scammers a real person has this number." }
+      {
+        "id": "a",
+        "label": "Tap the link and update your address",
+        "outcome": "costly",
+        "loss": 450,
+        "feedback": "The fake site asked for a small “redelivery fee” and stole your card number."
+      },
+      {
+        "id": "b",
+        "label": "Delete it and report it as junk",
+        "outcome": "safe",
+        "feedback": "USPS doesn't text you unless you signed up for tracking on a specific package. This was a smishing text."
+      },
+      {
+        "id": "c",
+        "label": "Reply asking which package it is",
+        "outcome": "risky",
+        "feedback": "No money lost, but replying tells scammers a real person has this number."
+      }
     ],
     "redFlags": [
       "You never asked USPS for text updates",
-      "Foreign number and a strange .top web address",
+      "Unknown number and a strange .top web address",
       "12-hour deadline"
     ],
     "safestAction": "Don't tap. Track real packages at usps.com with a tracking number you already have. Forward the text to 7726.",
     "sources": [
-      { "name": "USPIS", "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams" }
+      {
+        "name": "USPIS",
+        "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -48,9 +67,25 @@
       "link": "https://tollservices-pay.xyz"
     },
     "options": [
-      { "id": "a", "label": "Pay the $6.99 — it's small and you did drive a toll road", "outcome": "costly", "loss": 900, "feedback": "The $6.99 was bait. The site captured your card and ran up charges." },
-      { "id": "b", "label": "Ignore the link. Check your account in your toll agency's official app", "outcome": "safe", "feedback": "If you owed anything, it would show in your real account. Going direct beats any link." },
-      { "id": "c", "label": "Tap the link just to see if the site looks real", "outcome": "risky", "feedback": "You didn't pay, but scam sites can look perfect. Tapping gains nothing and risks a lot." }
+      {
+        "id": "a",
+        "label": "Pay the $6.99 — it's small and you did drive a toll road",
+        "outcome": "costly",
+        "loss": 900,
+        "feedback": "The $6.99 was bait. The site captured your card and ran up charges."
+      },
+      {
+        "id": "b",
+        "label": "Ignore the link. Check your account in your toll agency's official app",
+        "outcome": "safe",
+        "feedback": "If you owed anything, it would show in your real account. Going direct beats any link."
+      },
+      {
+        "id": "c",
+        "label": "Tap the link just to see if the site looks real",
+        "outcome": "risky",
+        "feedback": "You didn't pay, but scam sites can look perfect. Tapping gains nothing and risks a lot."
+      }
     ],
     "redFlags": [
       "Small, believable amount plus a big late-fee threat",
@@ -59,8 +94,14 @@
     ],
     "safestAction": "Don't click. Log in to your toll account through the official app or a website you type in yourself.",
     "sources": [
-      { "name": "FBI IC3", "url": "https://www.ic3.gov/PSA/2024/PSA240412" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam" }
+      {
+        "name": "FBI IC3",
+        "url": "https://www.ic3.gov/PSA/2024/PSA240412"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -78,14 +119,35 @@
       "senderDetail": "2USPS",
       "timestamp": "Text Message · Today 2:16 PM",
       "messages": [
-        { "from": "me", "text": "9400 1000 0000 0000 0000 00" },
-        { "from": "them", "text": "USPS: Your item 9400100000000000000000 was delivered in or at the mailbox at 2:14 pm in your city. Reply STOP to cancel." }
+        {
+          "from": "me",
+          "text": "9400 1000 0000 0000 0000 00"
+        },
+        {
+          "from": "them",
+          "text": "USPS: Your item 9400100000000000000000 was delivered in or at the mailbox at 2:14 pm in your city. Reply STOP to cancel."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Go check your mailbox", "outcome": "safe", "feedback": "You started this conversation with the real USPS short code, and it asks nothing of you. Nothing to fear." },
-      { "id": "b", "label": "Block the number — USPS never texts", "outcome": "risky", "feedback": "USPS does text when you sign up for tracking. Blocking just means no more updates you asked for." },
-      { "id": "c", "label": "Forward it to 7726 as spam", "outcome": "risky", "feedback": "This one's real. Reporting legitimate texts doesn't hurt you, but it wasn't needed." }
+      {
+        "id": "a",
+        "label": "Go check your mailbox",
+        "outcome": "safe",
+        "feedback": "You started this conversation with the real USPS short code, and it asks nothing of you. Nothing to fear."
+      },
+      {
+        "id": "b",
+        "label": "Block the number — USPS never texts",
+        "outcome": "risky",
+        "feedback": "USPS does text when you sign up for tracking. Blocking just means no more updates you asked for."
+      },
+      {
+        "id": "c",
+        "label": "Forward it to 7726 as spam",
+        "outcome": "risky",
+        "feedback": "This one's real. Reporting legitimate texts doesn't hurt you, but it wasn't needed."
+      }
     ],
     "redFlags": [
       "You requested these updates yourself",
@@ -94,8 +156,14 @@
     ],
     "safestAction": "Real updates you signed up for are fine. The tell is whether you started it and whether it asks for money or info.",
     "sources": [
-      { "name": "USPS", "url": "https://www.usps.com/text-tracking/welcome.htm" },
-      { "name": "USPIS", "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams" }
+      {
+        "name": "USPS",
+        "url": "https://www.usps.com/text-tracking/welcome.htm"
+      },
+      {
+        "name": "USPIS",
+        "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -118,9 +186,25 @@
       "footer": "We'll never ask for your password or payment details by email."
     },
     "options": [
-      { "id": "a", "label": "Open the ShopMart app and check your orders", "outcome": "safe", "feedback": "It matches an order you really placed, and checking in the app confirms it without clicking anything." },
-      { "id": "b", "label": "Report it as phishing and delete it", "outcome": "risky", "feedback": "This one was real. No harm done, but a quick look in the app would have told you." },
-      { "id": "c", "label": "Reply with your card number to confirm the order", "outcome": "costly", "loss": 250, "feedback": "Even with a real company, email is not a safe place for card numbers. It was exposed and misused." }
+      {
+        "id": "a",
+        "label": "Open the ShopMart app and check your orders",
+        "outcome": "safe",
+        "feedback": "It matches an order you really placed, and checking in the app confirms it without clicking anything."
+      },
+      {
+        "id": "b",
+        "label": "Report it as phishing and delete it",
+        "outcome": "risky",
+        "feedback": "This one was real. No harm done, but a quick look in the app would have told you."
+      },
+      {
+        "id": "c",
+        "label": "Reply with your card number to confirm the order",
+        "outcome": "costly",
+        "loss": 250,
+        "feedback": "Even with a real company, email is not a safe place for card numbers. It was exposed and misused."
+      }
     ],
     "redFlags": [
       "Matches an order you actually placed",
@@ -129,9 +213,13 @@
     ],
     "safestAction": "When a message matches something you did, confirm in the company's app or site — still the safest habit.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "active": false
   },
   {
     "id": "del-unexpected-package-qr",
@@ -149,9 +237,25 @@
       "sender": "A printed card tucked inside the box"
     },
     "options": [
-      { "id": "a", "label": "Scan it — you're curious who sent it", "outcome": "costly", "loss": 700, "feedback": "The page asked you to “log in to claim” and captured your account password and card details." },
-      { "id": "b", "label": "Don't scan it. Keep the item and check your accounts for anything odd", "outcome": "safe", "feedback": "You can legally keep unordered items. Skipping the QR code and watching your accounts is exactly right." },
-      { "id": "c", "label": "Scan it but don't enter anything", "outcome": "risky", "feedback": "You got lucky. Malicious pages can still try to download harmful files or trick you a few taps later." }
+      {
+        "id": "a",
+        "label": "Scan it — you're curious who sent it",
+        "outcome": "costly",
+        "loss": 700,
+        "feedback": "The page asked you to “log in to claim” and captured your account password and card details."
+      },
+      {
+        "id": "b",
+        "label": "Don't scan it. Keep the item and check your accounts for anything odd",
+        "outcome": "safe",
+        "feedback": "You can legally keep unordered items. Skipping the QR code and watching your accounts is exactly right."
+      },
+      {
+        "id": "c",
+        "label": "Scan it but don't enter anything",
+        "outcome": "risky",
+        "feedback": "You got lucky. Malicious pages can still try to download harmful files or trick you a few taps later."
+      }
     ],
     "redFlags": [
       "Package you never ordered (a brushing scam)",
@@ -160,7 +264,10 @@
     ],
     "safestAction": "Don't scan unexpected QR codes. You don't have to pay for or return unordered items. Check your accounts and credit report.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/scam-alert-qr-code-unexpected-package" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/scam-alert-qr-code-unexpected-package"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -183,9 +290,25 @@
       "footer": "Tracking: GX-7781-2204"
     },
     "options": [
-      { "id": "a", "label": "Pay the $3.25 so the package isn't destroyed", "outcome": "costly", "loss": 820, "feedback": "The tiny fee got your card number. The real charges came later." },
-      { "id": "b", "label": "Look up your order in the store's app and use the tracking it gives you", "outcome": "safe", "feedback": "The store's real tracking comes from the real carrier. If there were a fee, you'd see it there." },
-      { "id": "c", "label": "Forward it to a friend and ask what they think", "outcome": "risky", "feedback": "No harm yet, but it doesn't get you an answer. Checking the real order does." }
+      {
+        "id": "a",
+        "label": "Pay the $3.25 so the package isn't destroyed",
+        "outcome": "costly",
+        "loss": 820,
+        "feedback": "The tiny fee got your card number. The real charges came later."
+      },
+      {
+        "id": "b",
+        "label": "Look up your order in the store's app and use the tracking it gives you",
+        "outcome": "safe",
+        "feedback": "The store's real tracking comes from the real carrier. If there were a fee, you'd see it there."
+      },
+      {
+        "id": "c",
+        "label": "Forward it to a friend and ask what they think",
+        "outcome": "risky",
+        "feedback": "No harm yet, but it doesn't get you an answer. Checking the real order does."
+      }
     ],
     "redFlags": [
       "Tiny fee meant to seem harmless",
@@ -194,8 +317,14 @@
     ],
     "safestAction": "Track packages only with the tracking number from the store where you ordered, on the carrier's real website.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" },
-      { "name": "USPIS", "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      },
+      {
+        "name": "USPIS",
+        "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   }

@@ -13,14 +13,36 @@
       "senderDetail": "(800) 555-0110",
       "timestamp": "Incoming call",
       "messages": [
-        { "from": "them", "text": "This is Summit Bank's fraud team. Someone in Ohio is trying to wire $4,200 out of your checking account right now." },
-        { "from": "them", "text": "To protect your money, we'll move it to a new secure account. I'll walk you through sending it with your payment app." }
+        {
+          "from": "them",
+          "text": "This is Summit Bank's fraud team. Someone in Ohio is trying to wire $4,200 out of your checking account right now."
+        },
+        {
+          "from": "them",
+          "text": "To protect your money, we'll move it to a new secure account. I'll walk you through sending it with your payment app."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Follow their steps to move your money", "outcome": "costly", "loss": 4200, "feedback": "The “secure account” belonged to the scammer. Payment-app transfers you authorize are very hard to get back." },
-      { "id": "b", "label": "Hang up and call the number on the back of your card", "outcome": "safe", "feedback": "Your real bank will never ask you to move money to protect it. Calling the number you trust confirms your account is fine." },
-      { "id": "c", "label": "Ask them to prove it by telling you your balance", "outcome": "risky", "feedback": "Scammers sometimes have stolen account details. Knowing info about you doesn't prove anything." }
+      {
+        "id": "a",
+        "label": "Follow their steps to move your money",
+        "outcome": "costly",
+        "loss": 4200,
+        "feedback": "The “secure account” belonged to the scammer. Payment-app transfers you authorize are very hard to get back."
+      },
+      {
+        "id": "b",
+        "label": "Hang up and call the number on the back of your card",
+        "outcome": "safe",
+        "feedback": "Your real bank will never ask you to move money to protect it. Calling the number you trust confirms your account is fine."
+      },
+      {
+        "id": "c",
+        "label": "Ask them to prove it by telling you your balance",
+        "outcome": "risky",
+        "feedback": "Scammers sometimes have stolen account details. Knowing info about you doesn't prove anything."
+      }
     ],
     "redFlags": [
       "Told to move money to “protect it”",
@@ -29,7 +51,10 @@
     ],
     "safestAction": "Hang up and call your bank using the number on your card or in its app. No real bank asks you to transfer money for safety.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -49,9 +74,25 @@
       "body": "Summit Bank: Did you attempt a purchase of $86.40 at FUEL STOP #221 with card ending 4417? Reply YES or NO. We will never ask for your PIN, password, or a code by text."
     },
     "options": [
-      { "id": "a", "label": "Call the number on the back of your card", "outcome": "safe", "feedback": "This was a real alert. Calling the number on your card is always safe and gets the card locked fast." },
-      { "id": "b", "label": "Reply NO", "outcome": "safe", "feedback": "Real bank alerts use YES/NO replies with no links. Replying NO blocked the card. If anyone calls afterward asking for codes, hang up." },
-      { "id": "c", "label": "Ignore it — it's probably a scam", "outcome": "costly", "loss": 640, "feedback": "It was real. Because no one stopped it, the thief kept using your card for days." }
+      {
+        "id": "a",
+        "label": "Call the number on the back of your card",
+        "outcome": "safe",
+        "feedback": "This was a real alert. Calling the number on your card is always safe and gets the card locked fast."
+      },
+      {
+        "id": "b",
+        "label": "Reply NO",
+        "outcome": "safe",
+        "feedback": "Real bank alerts use YES/NO replies with no links. Replying NO blocked the card. If anyone calls afterward asking for codes, hang up."
+      },
+      {
+        "id": "c",
+        "label": "Ignore it — it's probably a scam",
+        "outcome": "costly",
+        "loss": 640,
+        "feedback": "It was real. Because no one stopped it, the thief kept using your card for days."
+      }
     ],
     "redFlags": [
       "Comes from the short code your bank uses for alerts",
@@ -60,8 +101,14 @@
     ],
     "safestAction": "Real alerts never include links or ask for codes. When in doubt, call the number on the back of your card.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages" },
-      { "name": "CFPB", "url": "https://www.consumerfinance.gov/consumer-tools/fraud/" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+      },
+      {
+        "name": "CFPB",
+        "url": "https://www.consumerfinance.gov/consumer-tools/fraud/"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -80,14 +127,34 @@
       "amount": "+$350.00",
       "note": "rent 🏠",
       "messages": [
-        { "from": "them", "text": "OMG I sent my rent to the wrong person 😭 can you please send it back? My landlord needs it today" }
+        {
+          "from": "them",
+          "text": "OMG I sent my rent to the wrong person 😭 can you please send it back? My landlord needs it today"
+        }
       ],
       "footer": "Payment received · Pending review"
     },
     "options": [
-      { "id": "a", "label": "Be kind and send the $350 back", "outcome": "costly", "loss": 350, "feedback": "Their payment came from a stolen card and was reversed. You lost the $350 you “returned.”" },
-      { "id": "b", "label": "Tell them to cancel it through the payment app's support", "outcome": "safe", "feedback": "If it was a real mistake, the sender can dispute it. You never send your own money back." },
-      { "id": "c", "label": "Send it back to a different account they give you", "outcome": "costly", "loss": 350, "feedback": "A “different account” is a classic twist. The original payment bounced and your money was gone." }
+      {
+        "id": "a",
+        "label": "Be kind and send the $350 back",
+        "outcome": "costly",
+        "loss": 350,
+        "feedback": "Their payment came from a stolen card and was reversed. You lost the $350 you “returned.”"
+      },
+      {
+        "id": "b",
+        "label": "Tell them to cancel it through the payment app's support",
+        "outcome": "safe",
+        "feedback": "If it was a real mistake, the sender can dispute it. You never send your own money back."
+      },
+      {
+        "id": "c",
+        "label": "Send it back to a different account they give you",
+        "outcome": "costly",
+        "loss": 350,
+        "feedback": "A “different account” is a classic twist. The original payment bounced and your money was gone."
+      }
     ],
     "redFlags": [
       "Unexpected money from a stranger",
@@ -96,7 +163,10 @@
     ],
     "safestAction": "Don't spend or send the money. Contact the payment app's support through the app and let them reverse it.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -119,9 +189,26 @@
       "buttonText": "View and Pay Invoice"
     },
     "options": [
-      { "id": "a", "label": "Call the number to cancel", "outcome": "costly", "loss": 2100, "feedback": "The “billing team” got you to install remote-access software for your refund, then moved money out of your account." },
-      { "id": "b", "label": "Open the PayWallet app yourself and check for pending charges", "outcome": "safe", "feedback": "The invoice was sent by a scammer through a real service. Unpaid invoices can't charge you. Your real account showed nothing owed." },
-      { "id": "c", "label": "Pay it now and dispute it later", "outcome": "costly", "loss": 500, "feedback": "Paying a fake invoice sends money straight to the scammer, and disputes aren't guaranteed." }
+      {
+        "id": "a",
+        "label": "Call the number to cancel",
+        "outcome": "costly",
+        "loss": 2100,
+        "feedback": "The “billing team” got you to install remote-access software for your refund, then moved money out of your account."
+      },
+      {
+        "id": "b",
+        "label": "Open the PayWallet app yourself and check for pending charges",
+        "outcome": "safe",
+        "feedback": "The invoice was sent by a scammer through a real service. Unpaid invoices can't charge you. Your real account showed nothing owed."
+      },
+      {
+        "id": "c",
+        "label": "Pay it now and dispute it later",
+        "outcome": "costly",
+        "loss": 500,
+        "feedback": "Paying a fake invoice sends money straight to the scammer, and disputes aren't guaranteed."
+      }
     ],
     "redFlags": [
       "Charge for something you never bought",
@@ -130,8 +217,14 @@
     ],
     "safestAction": "Never call numbers in an unexpected invoice. Check your account directly in the app, and report the invoice there.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2018/02/phishers-send-fake-invoices" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2018/02/phishers-send-fake-invoices"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -152,8 +245,18 @@
       "body": "Jordan requested $21.50 from you"
     },
     "options": [
-      { "id": "a", "label": "Pay the request", "outcome": "safe", "feedback": "Real request from someone you know, matching something you agreed to. That's how payment apps are meant to work." },
-      { "id": "b", "label": "Decline and report it as a scam", "outcome": "risky", "feedback": "No harm done, but this one was real. Your roommate is still waiting on that $21.50." }
+      {
+        "id": "a",
+        "label": "Pay the request",
+        "outcome": "safe",
+        "feedback": "Real request from someone you know, matching something you agreed to. That's how payment apps are meant to work."
+      },
+      {
+        "id": "b",
+        "label": "Decline and report it as a scam",
+        "outcome": "risky",
+        "feedback": "No harm done, but this one was real. Your roommate is still waiting on that $21.50."
+      }
     ],
     "redFlags": [
       "Someone you know, on their usual account",
@@ -162,7 +265,10 @@
     ],
     "safestAction": "Payment apps are for people you know and trust. Real requests match what you agreed to.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -182,9 +288,26 @@
       "sender": "Sticker slightly crooked, covering part of the meter's printed instructions"
     },
     "options": [
-      { "id": "a", "label": "Scan and pay with your card", "outcome": "costly", "loss": 750, "feedback": "The sticker covered the real code. The fake site kept your card number and charged it repeatedly." },
-      { "id": "b", "label": "Use the city's official parking app or the meter's card slot", "outcome": "safe", "feedback": "Paying through the official app or the meter itself skips whatever a sticker points to." },
-      { "id": "c", "label": "Scan it, but only pay if the page looks professional", "outcome": "costly", "loss": 750, "feedback": "Fake payment pages look professional on purpose. Looks aren't a safety check." }
+      {
+        "id": "a",
+        "label": "Scan and pay with your card",
+        "outcome": "costly",
+        "loss": 750,
+        "feedback": "The sticker covered the real code. The fake site kept your card number and charged it repeatedly."
+      },
+      {
+        "id": "b",
+        "label": "Use the city's official parking app or the meter's card slot",
+        "outcome": "safe",
+        "feedback": "Paying through the official app or the meter itself skips whatever a sticker points to."
+      },
+      {
+        "id": "c",
+        "label": "Scan it, but only pay if the page looks professional",
+        "outcome": "costly",
+        "loss": 750,
+        "feedback": "Fake payment pages look professional on purpose. Looks aren't a safety check."
+      }
     ],
     "redFlags": [
       "Sticker placed over printed instructions",
@@ -193,8 +316,14 @@
     ],
     "safestAction": "Check the link preview before opening any QR code. For parking, use the official city app, website, or the meter's slot.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
+      }
     ],
     "addedOn": "2026-09-15"
   }

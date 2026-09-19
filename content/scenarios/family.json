@@ -13,14 +13,36 @@
       "senderDetail": "(555) 555-0107",
       "timestamp": "Incoming call · 11:48 PM",
       "messages": [
-        { "from": "them", "text": "Grandma? It's me. I got in a car accident and they arrested me. Please don't tell Mom." },
-        { "from": "them", "text": "(A new voice) I'm his attorney. Bail is $4,000. A courier can pick up cash from your home tonight so he isn't held over the weekend." }
+        {
+          "from": "them",
+          "text": "It's me, I'm in trouble. I got in a car accident and they arrested me. Please don't tell Mom."
+        },
+        {
+          "from": "them",
+          "text": "(A new voice) I'm his attorney. Bail is $4,000. A courier can pick up cash from your home tonight so he isn't held over the weekend."
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Get the cash ready for the courier", "outcome": "costly", "loss": 4000, "feedback": "The voice was cloned with AI from videos online. Your grandson was asleep at home." },
-      { "id": "b", "label": "Hang up and call your grandson or his parents on a number you know", "outcome": "safe", "feedback": "Calling a number you already have exposes the fake in seconds. Voices can be cloned from a short clip." },
-      { "id": "c", "label": "Ask the caller a question only your grandson would know", "outcome": "safe", "feedback": "A private question (or a family code word) trips up impostors. Then call him directly to be sure." }
+      {
+        "id": "a",
+        "label": "Get the cash ready for the courier",
+        "outcome": "costly",
+        "loss": 4000,
+        "feedback": "The voice was cloned with AI from videos online. Your grandson was asleep at home."
+      },
+      {
+        "id": "b",
+        "label": "Hang up and call your grandson or his parents on a number you know",
+        "outcome": "safe",
+        "feedback": "Calling a number you already have exposes the fake in seconds. Voices can be cloned from a short clip."
+      },
+      {
+        "id": "c",
+        "label": "Ask the caller a question only your grandson would know",
+        "outcome": "safe",
+        "feedback": "A private question (or a family code word) trips up impostors. Then call him directly to be sure."
+      }
     ],
     "redFlags": [
       "Emotional emergency and “don't tell anyone”",
@@ -29,7 +51,10 @@
     ],
     "safestAction": "Hang up and call your loved one on a number you know. Consider a family code word for emergencies.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -46,14 +71,37 @@
       "sender": "Dr. James ❤️",
       "senderDetail": "Active now",
       "messages": [
-        { "from": "them", "text": "My contract ends next week and I can finally come home to you, my love." },
-        { "from": "them", "text": "But customs is holding my gold and belongings until I pay a $2,500 clearance fee. My accounts are frozen here. Could you help? I will repay you the moment I land. 🙏" }
+        {
+          "from": "them",
+          "text": "My contract ends next week and I can finally come home to you, my love."
+        },
+        {
+          "from": "them",
+          "text": "But customs is holding my gold and belongings until I pay a $2,500 clearance fee. My accounts are frozen here. Could you help? I will repay you the moment I land. 🙏"
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Send the $2,500 — you trust him", "outcome": "costly", "loss": 2500, "feedback": "There was always another fee after this one. “James” was a scammer using stolen photos." },
-      { "id": "b", "label": "Refuse, and talk it over with a friend or family member", "outcome": "safe", "feedback": "Anyone you've never met in person who asks for money is a scammer. An outside view makes that easier to see." },
-      { "id": "c", "label": "Send half to show you care", "outcome": "costly", "loss": 1250, "feedback": "Any money proves you'll pay, and the requests grow from there." }
+      {
+        "id": "a",
+        "label": "Send the $2,500 — you trust him",
+        "outcome": "costly",
+        "loss": 2500,
+        "feedback": "There was always another fee after this one. “James” was a scammer using stolen photos."
+      },
+      {
+        "id": "b",
+        "label": "Refuse, and talk it over with a friend or family member",
+        "outcome": "safe",
+        "feedback": "Anyone you've never met in person who asks for money is a scammer. An outside view makes that easier to see."
+      },
+      {
+        "id": "c",
+        "label": "Send half to show you care",
+        "outcome": "costly",
+        "loss": 1250,
+        "feedback": "Any money proves you'll pay, and the requests grow from there."
+      }
     ],
     "redFlags": [
       "Never met in person; avoids video calls",
@@ -62,7 +110,10 @@
     ],
     "safestAction": "Never send money to someone you've only met online. Do a reverse image search on their photos.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -83,8 +134,18 @@
       "body": "Rachel requested $45.00"
     },
     "options": [
-      { "id": "a", "label": "Pay it", "outcome": "safe", "feedback": "You agreed on this, it's her usual account, and the amount matches. That's a real request." },
-      { "id": "b", "label": "Decline and block — could be a hacker", "outcome": "risky", "feedback": "Being careful is good, but this matched your plan exactly. A quick text to her would have confirmed it." }
+      {
+        "id": "a",
+        "label": "Pay it",
+        "outcome": "safe",
+        "feedback": "You agreed on this, it's her usual account, and the amount matches. That's a real request."
+      },
+      {
+        "id": "b",
+        "label": "Decline and block — could be a hacker",
+        "outcome": "risky",
+        "feedback": "Being careful is good, but this matched your plan exactly. A quick text to her would have confirmed it."
+      }
     ],
     "redFlags": [
       "Matches something you already agreed to",
@@ -93,7 +154,10 @@
     ],
     "safestAction": "When a request matches a real plan with someone you know, it's fine. When in doubt, confirm by calling or texting them directly.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -111,14 +175,36 @@
       "senderDetail": "Not in your contacts",
       "timestamp": "Text Message · Today 3:02 PM",
       "messages": [
-        { "from": "them", "text": "Hi Mom it's me, I dropped my phone in the sink 🤦‍♀️ this is my new number, save it!" },
-        { "from": "them", "text": "Ugh I'm locked out of my banking app on the new phone and my rent payment of $1,850 is due today. Can you pay it for me? I'll pay you back Friday. Can't talk, at work" }
+        {
+          "from": "them",
+          "text": "Hi Mom it's me, I dropped my phone in the sink 🤦‍♀️ this is my new number, save it!"
+        },
+        {
+          "from": "them",
+          "text": "Ugh I'm locked out of my banking app on the new phone and my rent payment of $1,850 is due today. Can you pay it for me? I'll pay you back Friday. Can't talk, at work"
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Pay the rent so she isn't late", "outcome": "costly", "loss": 1850, "feedback": "Your daughter's phone was fine. The “landlord's account” belonged to a scammer." },
-      { "id": "b", "label": "Call her old number to check", "outcome": "safe", "feedback": "Calling the number you've always had reaches the real person. She was surprised and fine." },
-      { "id": "c", "label": "Text back a question only she'd know", "outcome": "safe", "feedback": "Scammers can't answer personal questions. Then call her old number to be certain." }
+      {
+        "id": "a",
+        "label": "Pay the rent so she isn't late",
+        "outcome": "costly",
+        "loss": 1850,
+        "feedback": "Your daughter's phone was fine. The “landlord's account” belonged to a scammer."
+      },
+      {
+        "id": "b",
+        "label": "Call her old number to check",
+        "outcome": "safe",
+        "feedback": "Calling the number you've always had reaches the real person. She was surprised and fine."
+      },
+      {
+        "id": "c",
+        "label": "Text back a question only she'd know",
+        "outcome": "safe",
+        "feedback": "Scammers can't answer personal questions. Then call her old number to be certain."
+      }
     ],
     "redFlags": [
       "New number with no name",
@@ -127,8 +213,14 @@
     ],
     "safestAction": "Call your family member on the number you already have before sending anything.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes" },
-      { "name": "FTC", "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+      }
     ],
     "addedOn": "2026-09-15"
   },
@@ -145,14 +237,36 @@
       "sender": "Jess Morgan",
       "senderDetail": "Friends since 2012",
       "messages": [
-        { "from": "them", "text": "Hey!! Long time 💕 I have to tell you, I just got a $15,000 payout from an investment program my coworker showed me. Totally legit, I was skeptical too." },
-        { "from": "them", "text": "Here's my screenshot. They're only taking a few more people. Want me to connect you with my account manager?" }
+        {
+          "from": "them",
+          "text": "Hey!! Long time 💕 I have to tell you, I just got a $15,000 payout from an investment program my coworker showed me. Totally legit, I was skeptical too."
+        },
+        {
+          "from": "them",
+          "text": "Here's my screenshot. They're only taking a few more people. Want me to connect you with my account manager?"
+        }
       ]
     },
     "options": [
-      { "id": "a", "label": "Get connected — it's Jess, you trust her", "outcome": "costly", "loss": 3000, "feedback": "Jess's account had been hacked. The “account manager” took your deposit and vanished." },
-      { "id": "b", "label": "Call or text Jess outside the app to ask if it's really her", "outcome": "safe", "feedback": "She had no idea — her account was hacked. You checked and warned her too." },
-      { "id": "c", "label": "Ask her more questions in the chat", "outcome": "risky", "feedback": "The hacker replies as Jess, using details from her old messages. The chat can't confirm anything." }
+      {
+        "id": "a",
+        "label": "Get connected — it's Jess, you trust her",
+        "outcome": "costly",
+        "loss": 3000,
+        "feedback": "Jess's account had been hacked. The “account manager” took your deposit and vanished."
+      },
+      {
+        "id": "b",
+        "label": "Call or text Jess outside the app to ask if it's really her",
+        "outcome": "safe",
+        "feedback": "She had no idea — her account was hacked. You checked and warned her too."
+      },
+      {
+        "id": "c",
+        "label": "Ask her more questions in the chat",
+        "outcome": "risky",
+        "feedback": "The hacker replies as Jess, using details from her old messages. The chat can't confirm anything."
+      }
     ],
     "redFlags": [
       "Out-of-character message about quick money",
@@ -161,7 +275,10 @@
     ],
     "safestAction": "If a friend suddenly pitches money-making online, contact them another way. Their account may be hacked.",
     "sources": [
-      { "name": "FTC", "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media" }
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media"
+      }
     ],
     "addedOn": "2026-09-15"
   }

@@ -277,5 +277,60 @@
       }
     ],
     "addedOn": "2026-09-15"
+  },
+  {
+    "id": "job-interview-invite-legit",
+    "category": "jobs",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Interview invite for a job you applied to",
+    "setup": "Two weeks ago you applied for a warehouse supervisor job on a company's own careers page. This arrives on a Tuesday morning.",
+    "content": {
+      "sender": "Dana Whitfield, Hiring Team",
+      "senderDetail": "dana.whitfield@brightmilllogistics.com",
+      "timestamp": "9:26 AM",
+      "subject": "Warehouse Supervisor (Req 3310) — interview times",
+      "body": "Hi,\n\nThanks for applying for the Warehouse Supervisor role. We'd like to meet for 45 minutes at the Fairview facility, or by video if that's easier.\n\nWould Thursday 10:00, Thursday 2:00, or Friday 11:00 work? Just reply with the one you prefer.\n\nDana",
+      "footer": "Brightmill Logistics · Open roles: brightmilllogistics.com/careers"
+    },
+    "options": [
+      {
+        "id": "a",
+        "label": "Check the job is still posted on the company's careers page, then reply with a time",
+        "outcome": "safe",
+        "feedback": "It matches a job you applied to, comes from the company's own address, and asks only for your time. Verifying first is a good habit."
+      },
+      {
+        "id": "b",
+        "label": "Ignore it — job emails are always scams",
+        "outcome": "risky",
+        "feedback": "This one was real, and you missed an interview you wanted. The tell isn't the email, it's whether they ask for money or personal details."
+      },
+      {
+        "id": "c",
+        "label": "Email a photo of your driver's license so they can start a background check",
+        "outcome": "risky",
+        "feedback": "Real employers do run background checks, but only after an offer, through a service you log into yourself. Never email your ID."
+      }
+    ],
+    "redFlags": [
+      "Matches a job you actually applied for, with a requisition number",
+      "Comes from the company's own email address, not a free account",
+      "Asks for your time, never for money or personal details"
+    ],
+    "safestAction": "Confirm the role on the company's official careers page. Real employers ask for your time first, and sensitive details only after a written offer.",
+    "sources": [
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/job-scams"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
+    ],
+    "addedOn": "2026-09-19"
   }
 ]

@@ -327,5 +327,61 @@
       }
     ],
     "addedOn": "2026-09-15"
+  },
+  {
+    "id": "del-carrier-delivery-email-legit",
+    "category": "delivery",
+    "channel": "email",
+    "difficulty": 2,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Delivery notice for a package you ordered",
+    "setup": "Last week you ordered a lamp and chose delivery updates at checkout. This email arrives at 7 a.m.",
+    "content": {
+      "sender": "Parcelway Shipping",
+      "senderDetail": "tracking@parcelwayshipping.com",
+      "timestamp": "7:04 AM",
+      "subject": "Out for delivery today",
+      "body": "Your package from Brightmill Home (tracking PW-4471-0982) is on the truck and should arrive between 1:00 and 5:00 PM. No signature needed.\n\nYou can follow it any time at parcelwayshipping.com/track using your tracking number.",
+      "buttonText": "Track package",
+      "footer": "Parcelway never asks for payment to release a delivery."
+    },
+    "options": [
+      {
+        "id": "a",
+        "label": "Nothing to do. Look it up on the carrier's site by typing the address yourself",
+        "outcome": "safe",
+        "feedback": "It matches an order you placed, the tracking number is one you can check, and nothing is being asked of you."
+      },
+      {
+        "id": "b",
+        "label": "Tap Track package in the email",
+        "outcome": "safe",
+        "feedback": "This one is real, so the link is fine. Typing the address yourself is still the habit that protects you when a message isn't."
+      },
+      {
+        "id": "c",
+        "label": "Delete it. Delivery emails are always scams",
+        "outcome": "risky",
+        "feedback": "This one was real. No money lost, but you missed the delivery window and the package went back to the depot."
+      }
+    ],
+    "redFlags": [
+      "Matches an order you placed and updates you signed up for",
+      "No fee, no urgency, and no request for personal details",
+      "The tracking number works on the carrier's own site"
+    ],
+    "safestAction": "Track packages using the number from your order, on a site you type in yourself. No real carrier charges a fee to release a delivery.",
+    "sources": [
+      {
+        "name": "USPIS",
+        "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
+    ],
+    "addedOn": "2026-09-19"
   }
 ]

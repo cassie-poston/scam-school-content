@@ -426,5 +426,60 @@
     ],
     "addedOn": "2026-09-15",
     "active": false
+  },
+  {
+    "id": "tech-password-change-alert-legit",
+    "category": "tech",
+    "channel": "email",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Alert right after you changed your password",
+    "setup": "You just changed your email password on your laptop. A minute later, this lands in your inbox.",
+    "content": {
+      "sender": "Account Security",
+      "senderDetail": "no-reply@accounts.pinecrestmail.com",
+      "timestamp": "Just now",
+      "subject": "Your password was changed",
+      "body": "The password for your account was changed a moment ago from a laptop in your usual location.\n\nIf this was you, there's nothing to do. If it wasn't, open your account settings to secure your account.",
+      "footer": "We will never ask you for your password or a verification code."
+    },
+    "options": [
+      {
+        "id": "a",
+        "label": "It was you. No action needed",
+        "outcome": "safe",
+        "feedback": "The alert matches something you did a minute ago and asks for nothing. That's what a real security notice looks like."
+      },
+      {
+        "id": "b",
+        "label": "Open your account settings yourself and check recent activity",
+        "outcome": "safe",
+        "feedback": "Even better as a habit. Going to your settings directly works whether the alert is real or not."
+      },
+      {
+        "id": "c",
+        "label": "Tap the link in the email and sign in again, just to be safe",
+        "outcome": "risky",
+        "feedback": "Real this time, so no harm. But signing in through a link in an email is exactly the habit phishing depends on."
+      }
+    ],
+    "redFlags": [
+      "Matches something you did a minute earlier",
+      "Says “if this was you, there's nothing to do” — no pressure, no deadline",
+      "Points you to your account settings rather than asking you to sign in"
+    ],
+    "safestAction": "If an alert matches what you just did, you're fine. If it doesn't, go to your account settings directly rather than through the message.",
+    "sources": [
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      },
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it"
+      }
+    ],
+    "addedOn": "2026-09-19"
   }
 ]

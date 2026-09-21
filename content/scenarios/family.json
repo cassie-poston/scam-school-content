@@ -29,7 +29,8 @@
         "label": "Get the cash ready for the courier",
         "outcome": "costly",
         "loss": 4000,
-        "feedback": "The voice was cloned with AI from videos online. Your grandson was asleep at home."
+        "feedback": "The voice was cloned with AI from videos online. Your grandson was asleep at home.",
+        "next": "courier"
       },
       {
         "id": "b",
@@ -42,6 +43,12 @@
         "label": "Ask the caller a question only your grandson would know",
         "outcome": "safe",
         "feedback": "A private question (or a family code word) trips up impostors. Then call him directly to be sure."
+      },
+      {
+        "id": "d",
+        "label": "Stay on the line and keep listening",
+        "outcome": "risky",
+        "feedback": "Every extra minute on the call is what they're after — it's how the pressure builds. Hanging up costs nothing."
       }
     ],
     "redFlags": [
@@ -56,7 +63,45 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2,
+    "timeLimit": 25,
+    "timeoutOption": "d",
+    "followUps": [
+      {
+        "id": "courier",
+        "setup": "Twenty minutes later a man in a polo shirt is at your door for the envelope. Your phone buzzes.",
+        "channel": "sms",
+        "content": {
+          "sender": "Attorney Reyes",
+          "senderDetail": "+1 (555) 555-0107",
+          "timestamp": "Text Message · 12:14 AM",
+          "body": "The judge added a court processing fee of $1,500. Please give the courier the additional amount now or he cannot file tonight and your grandson stays until Monday."
+        },
+        "prompt": "He's waiting on the porch. What do you do?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Add the $1,500 so he isn't stuck all weekend",
+            "outcome": "costly",
+            "loss": 1500,
+            "feedback": "The fee that appears at the door is the whole design. Couriers collecting cash for “bail” are a scam every single time."
+          },
+          {
+            "id": "b",
+            "label": "Shut the door and call your grandson's actual number",
+            "outcome": "safe",
+            "feedback": "He answered on the second ring, at home. Hard in the moment, right every time."
+          },
+          {
+            "id": "c",
+            "label": "Ask the courier for ID before handing anything over",
+            "outcome": "risky",
+            "feedback": "He had a convincing badge — they always do. ID at your door proves nothing; the phone call to your family does."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "fam-romance-customs-fee",
@@ -115,7 +160,8 @@
         "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   },
   {
     "id": "fam-sister-venmo-legit",
@@ -159,7 +205,8 @@
         "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "fam-hi-mom-new-number",
@@ -222,7 +269,8 @@
         "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "fam-hacked-friend-investing",
@@ -280,6 +328,7 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/can-you-spot-investment-scam-social-media"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   }
 ]

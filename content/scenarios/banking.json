@@ -29,19 +29,22 @@
         "label": "Follow their steps to move your money",
         "outcome": "costly",
         "loss": 4200,
-        "feedback": "The “secure account” belonged to the scammer. Payment-app transfers you authorize are very hard to get back."
+        "feedback": "The “secure account” belonged to the scammer. Payment-app transfers you authorize are very hard to get back.",
+        "next": "second-bite"
       },
       {
         "id": "b",
         "label": "Hang up and call the number on the back of your card",
         "outcome": "safe",
-        "feedback": "Your real bank will never ask you to move money to protect it. Calling the number you trust confirms your account is fine."
+        "feedback": "Your real bank will never ask you to move money to protect it. Calling the number you trust confirms your account is fine.",
+        "next": "ftc-callback"
       },
       {
         "id": "c",
         "label": "Ask them to prove it by telling you your balance",
         "outcome": "risky",
-        "feedback": "Scammers sometimes have stolen account details. Knowing info about you doesn't prove anything."
+        "feedback": "Scammers sometimes have stolen account details. Knowing info about you doesn't prove anything.",
+        "next": "ftc-callback"
       }
     ],
     "redFlags": [
@@ -56,7 +59,90 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2,
+    "timeLimit": 25,
+    "timeoutOption": "c",
+    "followUps": [
+      {
+        "id": "ftc-callback",
+        "setup": "You hang up. Two minutes later the phone rings again — the caller ID reads “Federal Trade Commission.”",
+        "channel": "call",
+        "content": {
+          "sender": "Federal Trade Commission",
+          "senderDetail": "(202) 555-0130",
+          "timestamp": "Incoming call",
+          "messages": [
+            {
+              "from": "them",
+              "text": "Sir, we monitor Summit Bank's fraud line. We can confirm the call you just received was legitimate."
+            },
+            {
+              "from": "them",
+              "text": "Your money is still exposed. Please complete the transfer the officer described, and I'll stay on the line to document it."
+            }
+          ]
+        },
+        "prompt": "Now what?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Make the transfer — two sources agree",
+            "outcome": "costly",
+            "loss": 4200,
+            "feedback": "The second call was the same crew. Scammers call back as a second “authority” precisely because it's what convinces careful people."
+          },
+          {
+            "id": "b",
+            "label": "Hang up again and call your bank on the number on your card",
+            "outcome": "safe",
+            "feedback": "Perfect. The real bank had no fraud case open. The second caller existed only to make the first one credible."
+          },
+          {
+            "id": "c",
+            "label": "Ask for a case number and call the FTC's public line yourself",
+            "outcome": "safe",
+            "feedback": "Also right. The FTC doesn't call to vouch for banks, and their real line would have told you so."
+          }
+        ]
+      },
+      {
+        "id": "second-bite",
+        "setup": "The transfer goes through. An hour later, the same officer calls back.",
+        "channel": "call",
+        "content": {
+          "sender": "Summit Bank",
+          "senderDetail": "(800) 555-0110",
+          "timestamp": "Incoming call",
+          "messages": [
+            {
+              "from": "them",
+              "text": "Good news, that money is secure. But we've detected a second attempt on your savings account."
+            },
+            {
+              "from": "them",
+              "text": "We need to move that balance to the protected account as well. I'll wait."
+            }
+          ]
+        },
+        "prompt": "What do you do?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Move the savings too before they take it",
+            "outcome": "costly",
+            "loss": 3000,
+            "feedback": "Once someone pays, the crew comes back for the rest. The second ask is where most of the money actually goes."
+          },
+          {
+            "id": "b",
+            "label": "Hang up. Call your bank and report both transfers",
+            "outcome": "safe",
+            "feedback": "The only move left. Reporting fast is what gives a bank any chance of clawing money back."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "bank-fraud-alert-text-legit",
@@ -110,7 +196,8 @@
         "url": "https://www.consumerfinance.gov/consumer-tools/fraud/"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "bank-accidental-payment",
@@ -168,7 +255,8 @@
         "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "bank-fake-invoice-callback",
@@ -226,7 +314,8 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   },
   {
     "id": "bank-roommate-request-legit",
@@ -270,7 +359,8 @@
         "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "bank-parking-meter-qr",
@@ -325,6 +415,71 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
+  },
+  {
+    "id": "bank-real-fraud-call-legit",
+    "category": "banking",
+    "channel": "call",
+    "difficulty": 3,
+    "isScam": false,
+    "trend": "evergreen",
+    "title": "Your bank's fraud line actually calls",
+    "setup": "You just tried to buy a laptop online and the payment was declined. Your phone rings, and the caller ID says your bank.",
+    "content": {
+      "sender": "Summit Bank",
+      "senderDetail": "(800) 555-0110",
+      "timestamp": "Incoming call",
+      "messages": [
+        {
+          "from": "them",
+          "text": "This is Summit Bank's fraud team about a declined charge of $1,299 at Brightmill Electronics. We're not asking for your PIN, your password, or any code."
+        },
+        {
+          "from": "them",
+          "text": "If you'd rather not take my word for it, hang up and call the number on the back of your card and ask for fraud. I'll note the file either way."
+        }
+      ]
+    },
+    "prompt": "What do you do?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Hang up and call the number on the back of your card",
+        "outcome": "safe",
+        "feedback": "The call was genuine, and you reached the same team in two minutes. Real fraud departments expect this and never push back on it."
+      },
+      {
+        "id": "b",
+        "label": "Answer their security questions and approve the charge",
+        "outcome": "risky",
+        "feedback": "It was real, so nothing bad happened. But “prove who you are to me” is exactly what an impostor asks. Calling back costs a minute and always works."
+      },
+      {
+        "id": "c",
+        "label": "Hang up and ignore it — banks never call",
+        "outcome": "risky",
+        "feedback": "Banks do call about declined charges. Your card stayed frozen for a week and the laptop order never went through."
+      }
+    ],
+    "redFlags": [
+      "Asks for nothing — no PIN, no password, no code",
+      "Invites you to hang up and call back on the number you already have",
+      "Matches something you did minutes ago"
+    ],
+    "safestAction": "Hang up and call the number on the back of your card. A real fraud team is happy to be called back; an impostor needs you to stay on this call.",
+    "sources": [
+      {
+        "name": "FTC",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam"
+      },
+      {
+        "name": "CFPB",
+        "url": "https://www.consumerfinance.gov/consumer-tools/fraud/"
+      }
+    ],
+    "addedOn": "2026-09-21",
+    "level": 2
   }
 ]

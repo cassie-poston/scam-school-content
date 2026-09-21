@@ -33,7 +33,8 @@
         "label": "Deposit $100 to unlock the premium tasks",
         "outcome": "costly",
         "loss": 2600,
-        "feedback": "Each “premium set” needed a bigger deposit. The earnings on screen were fake, and none of your money came back."
+        "feedback": "Each “premium set” needed a bigger deposit. The earnings on screen were fake, and none of your money came back.",
+        "next": "frozen"
       },
       {
         "id": "b",
@@ -64,7 +65,52 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1,
+    "followUps": [
+      {
+        "id": "frozen",
+        "setup": "Your deposit clears. The app now shows earnings of $1,840 — and a blocked withdrawal.",
+        "channel": "message",
+        "content": {
+          "sender": "Optima Support",
+          "senderDetail": "Task platform",
+          "timestamp": "WhatsApp · 9:02 PM",
+          "messages": [
+            {
+              "from": "me",
+              "text": "I'd like to withdraw my $1,840"
+            },
+            {
+              "from": "them",
+              "text": "Congratulations on your earnings! Withdrawals require a 20% commission deposit of $368 to release funds. This is refunded with your balance."
+            }
+          ]
+        },
+        "prompt": "What do you do?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Pay the $368 to release your earnings",
+            "outcome": "costly",
+            "loss": 368,
+            "feedback": "There were no earnings — the number on screen was a picture. Every fee you pay buys another fee."
+          },
+          {
+            "id": "b",
+            "label": "Stop. Screenshot everything and report it",
+            "outcome": "safe",
+            "feedback": "The only way this ends. Report it at ReportFraud.ftc.gov; the deposit is likely gone, but nothing more follows it."
+          },
+          {
+            "id": "c",
+            "label": "Complete more tasks to reach a higher withdrawal tier",
+            "outcome": "risky",
+            "feedback": "The tier moves every time you reach it. More work only deepens the sunk cost they're counting on."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "job-equipment-check",
@@ -121,7 +167,8 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "job-mystery-shopper",
@@ -173,7 +220,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2024/04/mystery-shopping-fake-checks-gift-cards"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "job-recruiter-interview-legit",
@@ -276,6 +324,7 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   }
 ]

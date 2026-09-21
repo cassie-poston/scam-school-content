@@ -30,7 +30,8 @@
         "label": "Deposit the check, then send the $1,500",
         "outcome": "costly",
         "loss": 1500,
-        "feedback": "The check bounced weeks later. The bank took back the money, and your $1,500 was gone."
+        "feedback": "The check bounced weeks later. The bank took back the money, and your $1,500 was gone.",
+        "next": "bounce"
       },
       {
         "id": "b",
@@ -43,7 +44,8 @@
         "label": "Wait until the check “clears,” then send the money",
         "outcome": "costly",
         "loss": 1500,
-        "feedback": "Funds can show as available before a fake check is caught. When it bounced, you owed the bank."
+        "feedback": "Funds can show as available before a fake check is caught. When it bounced, you owed the bank.",
+        "next": "bounce"
       }
     ],
     "redFlags": [
@@ -58,7 +60,37 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4,
+    "followUps": [
+      {
+        "id": "bounce",
+        "setup": "Sixteen days later, your bank calls. The cashier's check was counterfeit and your account is $1,500 short.",
+        "channel": "sms",
+        "content": {
+          "sender": "David M.",
+          "senderDetail": "Marketplace buyer",
+          "timestamp": "Text Message · Today",
+          "body": "So sorry about the bank mix-up! My assistant is mailing a replacement check today for the full amount plus $200 for your trouble. Just send the movers their fee again and we're square."
+        },
+        "prompt": "What do you do?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Send it again — the replacement check is coming",
+            "outcome": "costly",
+            "loss": 1500,
+            "feedback": "Same scam, second helping. The replacement check is fake too, and the bank holds you responsible for both."
+          },
+          {
+            "id": "b",
+            "label": "Stop all contact. Tell your bank it was a fake-check scam",
+            "outcome": "safe",
+            "feedback": "Right. Report it to your bank and at ReportFraud.ftc.gov, and never send money against a deposited check from a stranger."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "shop-payment-upgrade-email",
@@ -112,7 +144,8 @@
         "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "shop-fake-store-ad",
@@ -225,7 +258,8 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "shop-rental-deposit",
@@ -286,7 +320,8 @@
         "url": "https://consumer.ftc.gov/articles/rental-listing-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   },
   {
     "id": "shop-refund-confirmation-legit",
@@ -337,7 +372,8 @@
         "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   },
   {
     "id": "shop-restaurant-qr-legit",
@@ -386,6 +422,7 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   }
 ]

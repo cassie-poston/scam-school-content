@@ -48,7 +48,10 @@
         "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3,
+    "timeLimit": 15,
+    "timeoutOption": "c"
   },
   {
     "id": "tech-phantom-hacker",
@@ -108,7 +111,8 @@
         "url": "https://www.ic3.gov/PSA/2023/PSA230929"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2
   },
   {
     "id": "tech-verification-code-marketplace",
@@ -169,7 +173,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 4
   },
   {
     "id": "tech-login-code-legit",
@@ -212,7 +217,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "tech-cloud-storage-phishing",
@@ -265,7 +271,8 @@
         "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   },
   {
     "id": "tech-new-signin-legit",
@@ -371,7 +378,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2020/08/scammers-customer-service-another-imposter-scam"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   },
   {
     "id": "tech-fake-captcha-command",

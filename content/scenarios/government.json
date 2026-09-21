@@ -60,7 +60,10 @@
         "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2,
+    "timeLimit": 25,
+    "timeoutOption": "c"
   },
   {
     "id": "gov-ssa-suspended-number",
@@ -110,7 +113,8 @@
         "url": "https://www.ssa.gov/scam/"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2
   },
   {
     "id": "gov-jury-duty-warrant",
@@ -173,7 +177,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2024/09/scammers-use-bitcoin-atms-steal-your-money"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2
   },
   {
     "id": "gov-irs-letter-legit",
@@ -225,7 +230,8 @@
         "url": "https://www.irs.gov/newsroom/how-to-know-its-really-the-irs-calling-or-knocking-on-your-door-collection"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   },
   {
     "id": "gov-irs-refund-phishing-email",
@@ -282,7 +288,8 @@
         "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   },
   {
     "id": "gov-dmv-ticket-text",
@@ -333,7 +340,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2025/07/text-about-overdue-traffic-ticket-probably-scam"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "gov-medicare-card-call",
@@ -392,7 +400,8 @@
         "url": "https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 2
   },
   {
     "id": "gov-student-loan-forgiveness",
@@ -446,6 +455,7 @@
         "url": "https://studentaid.gov/resources/scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 5
   }
 ]

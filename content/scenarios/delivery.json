@@ -48,7 +48,8 @@
         "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "del-unpaid-toll-smishing",
@@ -72,7 +73,8 @@
         "label": "Pay the $6.99 — it's small and you did drive a toll road",
         "outcome": "costly",
         "loss": 900,
-        "feedback": "The $6.99 was bait. The site captured your card and ran up charges."
+        "feedback": "The $6.99 was bait. The site captured your card and ran up charges.",
+        "next": "card-call"
       },
       {
         "id": "b",
@@ -84,7 +86,8 @@
         "id": "c",
         "label": "Tap the link just to see if the site looks real",
         "outcome": "risky",
-        "feedback": "You didn't pay, but scam sites can look perfect. Tapping gains nothing and risks a lot."
+        "feedback": "You didn't pay, but scam sites can look perfect. Tapping gains nothing and risks a lot.",
+        "next": "lookalike-page"
       }
     ],
     "redFlags": [
@@ -103,7 +106,75 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1,
+    "followUps": [
+      {
+        "id": "card-call",
+        "setup": "An hour after you paid the $6.99, your phone rings.",
+        "channel": "call",
+        "content": {
+          "sender": "Card Services",
+          "senderDetail": "(877) 555-0146",
+          "timestamp": "Incoming call",
+          "messages": [
+            {
+              "from": "them",
+              "text": "We're seeing unusual charges on the card you used a moment ago. To block them, I'm sending a six-digit code."
+            },
+            {
+              "from": "them",
+              "text": "Read it back to me and I'll stop the transactions."
+            }
+          ]
+        },
+        "prompt": "What do you do?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Read them the code so they can block it",
+            "outcome": "costly",
+            "loss": 1200,
+            "feedback": "The code authorized them, not the block. Paying a scam site often books you a follow-up call — they know exactly which card you used."
+          },
+          {
+            "id": "b",
+            "label": "Hang up and call the number on the back of your card",
+            "outcome": "safe",
+            "feedback": "Right. Your real bank cancelled the card. Nobody legitimate ever needs a code read back to them."
+          }
+        ]
+      },
+      {
+        "id": "lookalike-page",
+        "setup": "The page opens. It looks exactly like your toll agency's site, down to the logo.",
+        "channel": "website",
+        "content": {
+          "url": "tollservices-pay.xyz/account",
+          "sender": "Toll Services",
+          "subject": "Outstanding balance: $6.99",
+          "body": "Enter your card details to clear your balance and avoid a $50.00 late fee. Your plate number has been pre-filled.",
+          "buttonText": "Pay $6.99",
+          "footer": "Secure payment · SSL encrypted"
+        },
+        "prompt": "It looks convincing. What now?",
+        "options": [
+          {
+            "id": "a",
+            "label": "Pay — it has your plate number, so it must be real",
+            "outcome": "costly",
+            "loss": 900,
+            "feedback": "Plate numbers are guessable or bought in bulk. A detail that looks personal is a tactic, not proof."
+          },
+          {
+            "id": "b",
+            "label": "Close it and check your account in the official toll app",
+            "outcome": "safe",
+            "feedback": "Exactly. A convincing page proves nothing — the address was still wrong, and your real account showed no balance."
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "del-usps-text-tracking-legit",
@@ -165,7 +236,8 @@
         "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 1
   },
   {
     "id": "del-order-shipped-legit",
@@ -269,7 +341,8 @@
         "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/scam-alert-qr-code-unexpected-package"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   },
   {
     "id": "del-customs-fee-email",
@@ -326,6 +399,7 @@
         "url": "https://www.uspis.gov/news/scam-article/smishing-package-tracking-text-scams"
       }
     ],
-    "addedOn": "2026-09-15"
+    "addedOn": "2026-09-15",
+    "level": 3
   }
 ]

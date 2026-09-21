@@ -80,6 +80,62 @@ def validate(s, category_ids):
         datetime.date.fromisoformat(s["addedOn"])
     except ValueError:
         p.append(f"{tag} addedOn must look like 2026-09-18")
+    if "level" in s and s["level"] not in (1, 2, 3, 4, 5):
+        p.append(f"{tag} level must be 1-5")
+    p += chain_problems(s, tag)
+    return p
+
+
+def chain_problems(s, tag):
+    """Follow-up beats: ids resolve, beats are reachable, timers name their option."""
+    p = []
+    steps = {"start": s}
+    for beat in s.get("followUps", []):
+        if beat.get("id") in steps:
+            p.append(f"{tag} follow-up id '{beat.get('id')}' is used twice")
+        steps[beat.get("id")] = beat
+        if not beat.get("setup"):
+            p.append(f"{tag} follow-up '{beat.get('id')}' needs a setup line saying what just happened")
+        if not beat.get("content"):
+            p.append(f"{tag} follow-up '{beat.get('id')}' needs content")
+        opts = beat.get("options", [])
+        if not 2 <= len(opts) <= 4:
+            p.append(f"{tag} follow-up '{beat.get('id')}' needs 2-4 options")
+        if not any(o.get("outcome") == "safe" for o in opts):
+            p.append(f"{tag} follow-up '{beat.get('id')}' needs at least one safe option")
+        for o in opts:
+            loss = o.get("loss", 0) or 0
+            if o.get("outcome") == "safe" and loss > 0:
+                p.append(f"{tag} follow-up '{beat.get('id')}' option {o.get('id')}: safe options can't lose money")
+            if o.get("outcome") == "costly" and loss <= 0:
+                p.append(f"{tag} follow-up '{beat.get('id')}' option {o.get('id')}: costly options need a loss")
+            if not o.get("label") or not o.get("feedback"):
+                p.append(f"{tag} follow-up '{beat.get('id')}' option {o.get('id')}: missing label or feedback")
+
+    reachable = {"start"}
+    frontier = ["start"]
+    while frontier:
+        step = steps.get(frontier.pop())
+        for o in (step or {}).get("options", []):
+            nxt = o.get("next")
+            if nxt and nxt not in steps:
+                p.append(f"{tag} option {o.get('id')} points at '{nxt}', which doesn't exist")
+            elif nxt and nxt not in reachable:
+                reachable.add(nxt); frontier.append(nxt)
+    for beat in s.get("followUps", []):
+        if beat.get("id") not in reachable:
+            p.append(f"{tag} follow-up '{beat.get('id')}' can't be reached from any option")
+
+    for step_id, step in steps.items():
+        if "timeLimit" not in step:
+            continue
+        where = tag if step_id == "start" else f"{tag} follow-up '{step_id}'"
+        if not 5 <= step["timeLimit"] <= 120:
+            p.append(f"{where} timeLimit must be 5-120 seconds")
+        if not step.get("timeoutOption"):
+            p.append(f"{where} is timed, so it needs a timeoutOption")
+        elif step["timeoutOption"] not in [o.get("id") for o in step.get("options", [])]:
+            p.append(f"{where} timeoutOption '{step['timeoutOption']}' isn't one of its options")
     return p
 
 
@@ -137,7 +193,17 @@ def main():
 
     print(f"{len(active)} active scenarios: {sum(s['isScam'] for s in active)} scams, "
           f"{sum(not s['isScam'] for s in active)} legit, "
-          f"{sum(s['trend'] == 'emerging' for s in active)} emerging")
+          f"{sum(s['trend'] == 'emerging' for s in active)} emerging, "
+          f"{sum(1 for s in active if s.get('followUps'))} that keep going, "
+          f"{sum(1 for s in active if s.get('timeLimit'))} timed")
+    for lvl in (1, 2, 3, 4, 5):
+        in_level = [s for s in active if s.get("level") == lvl]
+        legit = sum(1 for s in in_level if not s["isScam"])
+        print(f"  Level {lvl}: {len(in_level):>2} scenarios, {legit} legit")
+        if not in_level:
+            problems.append(f"Level {lvl} has no scenarios; the course needs all five")
+        elif legit == 0:
+            print(f"    note: every situation in Level {lvl} is a scam")
 
     if args.check_links:
         print("Checking source links...")
